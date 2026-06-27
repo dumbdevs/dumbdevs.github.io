@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="D.U.M.B. is a wake-up call for developers who use AI without surrendering judgment, debugging ability, or ownership."
+    >
+    <title>D.U.M.B. — Developers Under Machine Brainrot</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-lang="en">
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="wordmark" href="#top" aria-label="D.U.M.B. home">
+        <span>D.U.M.B.</span>
+      </a>
+      <nav class="nav-links" aria-label="Section navigation">
+        <a href="#symptoms">
+          <span data-lang="en">Symptoms</span>
+          <span data-lang="zh">症状</span>
+          <span data-lang="zh-Hant">症狀</span>
+          <span data-lang="ja">症状</span>
+        </a>
+        <a href="#damage">
+          <span data-lang="en">Damage</span>
+          <span data-lang="zh">危害</span>
+          <span data-lang="zh-Hant">危害</span>
+          <span data-lang="ja">害</span>
+        </a>
+        <a href="#protocol">
+          <span data-lang="en">Recovery</span>
+          <span data-lang="zh">自救</span>
+          <span data-lang="zh-Hant">自救</span>
+          <span data-lang="ja">立て直し</span>
+        </a>
+        <a href="https://github.com/D-U-M-B" target="_blank" rel="noreferrer">
+          GitHub
+        </a>
+      </nav>
+      <div class="language-switch">
+        <label class="sr-only" for="language-select">Language</label>
+        <select id="language-select" class="language-select" data-language-select>
+          <option value="en">English</option>
+          <option value="zh">简体中文</option>
+          <option value="zh-Hant">繁體中文</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-band" aria-labelledby="hero-title">
+        <div class="noise-field" aria-hidden="true">
+          <span>READ</span>
+          <span>REASON</span>
+          <span>DEBUG</span>
+          <span>VERIFY</span>
+          <span>OWN</span>
+          <span>READ</span>
+          <span>REASON</span>
+          <span>DEBUG</span>
+          <span>VERIFY</span>
+          <span>OWN</span>
+        </div>
+
+        <div class="section-inner hero-inner">
+          <p class="kicker">
+            <span data-lang="en">Developers Under Machine Brainrot</span>
+            <span data-lang="zh">受机器化思维侵蚀的开发者</span>
+            <span data-lang="zh-Hant">被機械化思維侵蝕的開發者</span>
+            <span data-lang="ja">機械化した思考に侵される開発者</span>
+          </p>
+          <h1 id="hero-title">
+            <span class="title-lines" data-lang="en">
+              <span>Do not let the machine</span>
+              <span>think for you</span>
+            </span>
+            <span class="title-lines" data-lang="zh">
+              <span>别让机器替你思考</span>
+            </span>
+            <span class="title-lines" data-lang="zh-Hant">
+              <span>別讓機器替你思考</span>
+            </span>
+            <span class="title-lines" data-lang="ja">
+              <span>機械に考えさせるな</span>
+            </span>
+          </h1>
+          <p class="hero-line">
+            <span data-lang="en">AI can help. Judgment must stay yours.</span>
+            <span data-lang="zh">AI 可以帮忙，判断必须留在你这里。</span>
+            <span data-lang="zh-Hant">AI 可以幫忙，判斷必須留在你這裡。</span>
+            <span data-lang="ja">AIは助けになる。判断はあなたの手元に残せ。</span>
+          </p>
+          <div class="hero-copy">
+            <p>
+              <span data-lang="en">D.U.M.B. is a reminder for developers who still want to understand their own work.</span>
+              <span data-lang="zh">D.U.M.B. 提醒开发者：你仍然要理解自己的工作。</span>
+              <span data-lang="zh-Hant">D.U.M.B. 提醒開發者：你仍然要理解自己的工作。</span>
+              <span data-lang="ja">D.U.M.B. は、自分の仕事をまだ理解したい開発者への警告です。</span>
+            </p>
+            <p>
+              <span data-lang="en">Speed is useful only when your brain stays in the loop.</span>
+              <span data-lang="zh">速度有价值，前提是你的大脑还在场。</span>
+              <span data-lang="zh-Hant">速度有價值，前提是你的大腦還在場。</span>
+              <span data-lang="ja">速さに価値があるのは、頭がまだそこにあるときだけです。</span>
+            </p>
+          </div>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="text-button danger" href="#symptoms">
+              <span data-lang="en">Run the self-audit</span>
+              <span data-lang="zh">开始自我审计</span>
+              <span data-lang="zh-Hant">開始自我檢查</span>
+              <span data-lang="ja">自己点検を始める</span>
+            </a>
+            <a class="text-button" href="https://github.com/D-U-M-B" target="_blank" rel="noreferrer">
+              <span data-lang="en">Open GitHub organization</span>
+              <span data-lang="zh">打开 GitHub 组织</span>
+              <span data-lang="zh-Hant">開啟 GitHub 組織</span>
+              <span data-lang="ja">GitHub 組織を開く</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band declaration" aria-labelledby="declaration-title">
+        <div class="section-inner compact-inner">
+          <div class="split-title">
+            <p class="eyebrow">
+              <span data-lang="en">Public Warning</span>
+              <span data-lang="zh">公开警告</span>
+              <span data-lang="zh-Hant">公開警告</span>
+              <span data-lang="ja">公開警告</span>
+            </p>
+            <h2 id="declaration-title">
+              <span class="title-lines" data-lang="en">
+                <span>A fast answer</span>
+                <span>is still yours to defend</span>
+              </span>
+              <span class="title-lines" data-lang="zh">
+                <span>答案来得再快</span>
+                <span>也要由你负责</span>
+              </span>
+              <span class="title-lines" data-lang="zh-Hant">
+                <span>答案來得再快</span>
+                <span>也要由你負責</span>
+              </span>
+              <span class="title-lines" data-lang="ja">
+                <span>速い答えでも</span>
+                <span>守るのはあなた</span>
+              </span>
+            </h2>
+          </div>
+          <div class="body-copy lead-copy">
+            <p>
+              <span data-lang="en">If you cannot explain it, debug it, or verify it, you are only renting confidence.</span>
+              <span data-lang="zh">如果你无法解释、调试、验证它，你只是租来了一点自信。</span>
+              <span data-lang="zh-Hant">如果你無法解釋、除錯、驗證它，你只是租來了一點自信。</span>
+              <span data-lang="ja">説明もデバッグも検証もできないなら、その自信は借り物です。</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band" id="symptoms" aria-labelledby="symptoms-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">
+              <span data-lang="en">Loss Of Control</span>
+              <span data-lang="zh">失控症状</span>
+              <span data-lang="zh-Hant">失控症狀</span>
+              <span data-lang="ja">制御不能の兆候</span>
+            </p>
+            <h2 id="symptoms-title">
+              <span class="title-lines" data-lang="en">
+                <span>Convenience is how</span>
+                <span>control slips away</span>
+              </span>
+              <span class="title-lines" data-lang="zh">
+                <span>失控往往从方便开始</span>
+              </span>
+              <span class="title-lines" data-lang="zh-Hant">
+                <span>失控往往從方便開始</span>
+              </span>
+              <span class="title-lines" data-lang="ja">
+                <span>便利さから</span>
+                <span>制御は失われる</span>
+              </span>
+            </h2>
+          </div>
+
+          <div class="symptom-grid">
+            <article class="signal-card">
+              <span class="card-index">01</span>
+              <h3>
+                <span data-lang="en">You merge code you cannot explain</span>
+                <span data-lang="zh">你合并了说不清的代码</span>
+                <span data-lang="zh-Hant">你合併了說不清的程式碼</span>
+                <span data-lang="ja">説明できないコードをマージしている</span>
+              </h3>
+              <p>
+                <span data-lang="en">The tests pass, but you cannot say why the change belongs.</span>
+                <span data-lang="zh">测试过了，但你说不清这个改动为什么该存在。</span>
+                <span data-lang="zh-Hant">測試通過了，但你說不清這個改動為什麼該存在。</span>
+                <span data-lang="ja">テストは通る。でも、その変更がなぜ必要かを説明できない。</span>
+              </p>
+            </article>
+            <article class="signal-card">
+              <span class="card-index">02</span>
+              <h3>
+                <span data-lang="en">Your debugger becomes a chat box</span>
+                <span data-lang="zh">你的调试器变成了聊天框</span>
+                <span data-lang="zh-Hant">你的除錯器變成了聊天框</span>
+                <span data-lang="ja">デバッガがチャット欄になる</span>
+              </h3>
+              <p>
+                <span data-lang="en">The stack trace goes out. A guess comes back.</span>
+                <span data-lang="zh">堆栈发出去，猜测传回来。</span>
+                <span data-lang="zh-Hant">Stack trace 丟出去，猜測傳回來。</span>
+                <span data-lang="ja">スタックトレースを投げる。返ってくるのは推測。</span>
+              </p>
+            </article>
+            <article class="signal-card">
+              <span class="card-index">03</span>
+              <h3>
+                <span data-lang="en">Saving keystrokes becomes the goal</span>
+                <span data-lang="zh">少敲几行变成了目标</span>
+                <span data-lang="zh-Hant">少敲幾行變成了目標</span>
+                <span data-lang="ja">キー入力の削減が目的になる</span>
+              </h3>
+              <p>
+                <span data-lang="en">The code arrives faster than the team can understand it.</span>
+                <span data-lang="zh">代码来得比团队理解它还快。</span>
+                <span data-lang="zh-Hant">程式碼來得比團隊理解它還快。</span>
+                <span data-lang="ja">コードは、チームが理解するより速く届く。</span>
+              </p>
+            </article>
+            <article class="signal-card">
+              <span class="card-index">04</span>
+              <h3>
+                <span data-lang="en">Fluent starts to feel true</span>
+                <span data-lang="zh">流畅开始像真相</span>
+                <span data-lang="zh-Hant">流暢開始像真相</span>
+                <span data-lang="ja">流暢さが真実に見え始める</span>
+              </h3>
+              <p>
+                <span data-lang="en">A clean sentence is not proof.</span>
+                <span data-lang="zh">一句顺口的话不是证据。</span>
+                <span data-lang="zh-Hant">一句順口的話不是證據。</span>
+                <span data-lang="ja">きれいな一文は証拠ではない。</span>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band damage" id="damage" aria-labelledby="damage-title">
+        <div class="section-inner">
+          <div class="section-heading narrow-heading">
+            <p class="eyebrow">
+              <span data-lang="en">Damage Report</span>
+              <span data-lang="zh">危害报告</span>
+              <span data-lang="zh-Hant">危害報告</span>
+              <span data-lang="ja">被害報告</span>
+            </p>
+            <h2 id="damage-title">
+              <span class="title-lines" data-lang="en">
+                <span>The first thing you lose</span>
+                <span>is judgment</span>
+              </span>
+              <span class="title-lines" data-lang="zh">
+                <span>最先丢掉的是判断力</span>
+              </span>
+              <span class="title-lines" data-lang="zh-Hant">
+                <span>最先丟掉的是判斷力</span>
+              </span>
+              <span class="title-lines" data-lang="ja">
+                <span>最初に失うのは</span>
+                <span>判断力</span>
+              </span>
+            </h2>
+          </div>
+
+          <div class="damage-board">
+            <article>
+              <h3>
+                <span data-lang="en">Comprehension Debt</span>
+                <span data-lang="zh">理解债务</span>
+                <span data-lang="zh-Hant">理解債務</span>
+                <span data-lang="ja">理解負債</span>
+              </h3>
+              <p>
+                <span data-lang="en">Every unexplained answer comes due later.</span>
+                <span data-lang="zh">每个没弄懂的答案，迟早都会来收账。</span>
+                <span data-lang="zh-Hant">每個沒弄懂的答案，遲早都會回來討債。</span>
+                <span data-lang="ja">理解しないまま受け入れた答えは、あとで必ず請求される。</span>
+              </p>
+            </article>
+            <article>
+              <h3>
+                <span data-lang="en">Debugging Drift</span>
+                <span data-lang="zh">调试手感退化</span>
+                <span data-lang="zh-Hant">除錯手感退化</span>
+                <span data-lang="ja">デバッグ感覚の劣化</span>
+              </h3>
+              <p>
+                <span data-lang="en">You stop tracing causes and start collecting patches.</span>
+                <span data-lang="zh">你不再追原因，只是在收集补丁。</span>
+                <span data-lang="zh-Hant">你不再追原因，只是在收集 patch。</span>
+                <span data-lang="ja">原因を追わず、パッチを集め始める。</span>
+              </p>
+            </article>
+            <article>
+              <h3>
+                <span data-lang="en">Borrowed Responsibility</span>
+                <span data-lang="zh">借来的责任感</span>
+                <span data-lang="zh-Hant">借來的責任感</span>
+                <span data-lang="ja">借り物の責任感</span>
+              </h3>
+              <p>
+                <span data-lang="en">The model suggested it. Your name shipped it.</span>
+                <span data-lang="zh">建议来自模型，交付记录上却是你的名字。</span>
+                <span data-lang="zh-Hant">建議來自模型，上線紀錄上卻是你的名字。</span>
+                <span data-lang="ja">提案したのはモデル。出した名前はあなた。</span>
+              </p>
+            </article>
+            <article>
+              <h3>
+                <span data-lang="en">Architecture Rot</span>
+                <span data-lang="zh">架构腐烂</span>
+                <span data-lang="zh-Hant">架構腐爛</span>
+                <span data-lang="ja">アーキテクチャの腐敗</span>
+              </h3>
+              <p>
+                <span data-lang="en">Small fixes quietly become a system nobody can reason about.</span>
+                <span data-lang="zh">小修小补，最后堆成没人能推理的系统。</span>
+                <span data-lang="zh-Hant">小修小補，最後堆成沒人能推理的系統。</span>
+                <span data-lang="ja">小さな修正が、誰も推論できないシステムになる。</span>
+              </p>
+            </article>
+            <article>
+              <h3>
+                <span data-lang="en">Knowledge Collapse</span>
+                <span data-lang="zh">知识坍塌</span>
+                <span data-lang="zh-Hant">知識坍塌</span>
+                <span data-lang="ja">知識の崩壊</span>
+              </h3>
+              <p>
+                <span data-lang="en">Shared understanding turns into private chat history.</span>
+                <span data-lang="zh">团队共识变成了各自的聊天记录。</span>
+                <span data-lang="zh-Hant">團隊共識變成了各自的聊天紀錄。</span>
+                <span data-lang="ja">共有理解が、各自のチャット履歴になる。</span>
+              </p>
+            </article>
+            <article>
+              <h3>
+                <span data-lang="en">False Velocity</span>
+                <span data-lang="zh">虚假速度</span>
+                <span data-lang="zh-Hant">虛假速度</span>
+                <span data-lang="ja">偽の速度</span>
+              </h3>
+              <p>
+                <span data-lang="en">Moving faster is useless if thinking falls behind.</span>
+                <span data-lang="zh">思考跟不上，跑得再快也只是失控。</span>
+                <span data-lang="zh-Hant">思考跟不上，跑得再快也只是失控。</span>
+                <span data-lang="ja">考える力が追いつかない速さは、ただの暴走です。</span>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band disasters" id="cases" aria-labelledby="cases-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">
+              <span data-lang="en">Synthetic Case Files</span>
+              <span data-lang="zh">合成案例档案</span>
+              <span data-lang="zh-Hant">合成案例檔案</span>
+              <span data-lang="ja">合成ケースファイル</span>
+            </p>
+            <h2 id="cases-title">
+              <span class="title-lines" data-lang="en">
+                <span>Made-up cases</span>
+                <span>real warning signs</span>
+              </span>
+              <span class="title-lines" data-lang="zh">
+                <span>案例是虚构的</span>
+                <span>警报是真实的</span>
+              </span>
+              <span class="title-lines" data-lang="zh-Hant">
+                <span>案例是虛構的</span>
+                <span>警報是真實的</span>
+              </span>
+              <span class="title-lines" data-lang="ja">
+                <span>事例は作りもの</span>
+                <span>警報は本物</span>
+              </span>
+            </h2>
+          </div>
+
+          <div class="case-list">
+            <article class="case-file">
+              <div class="case-meta">
+                <span>CASE 17-A</span>
+                <span data-lang="en">Synthetic composite</span>
+                <span data-lang="zh">合成案例</span>
+                <span data-lang="zh-Hant">合成案例</span>
+                <span data-lang="ja">合成ケース</span>
+              </div>
+              <h3>
+                <span data-lang="en">The cleanup script that deleted production data</span>
+                <span data-lang="zh">清理脚本清掉了生产数据</span>
+                <span data-lang="zh-Hant">清理腳本清掉了正式資料</span>
+                <span data-lang="ja">クリーンアップスクリプトが本番データを消した</span>
+              </h3>
+              <p>
+                <span data-lang="en">The generated command missed the tenant guard. Test habits went straight to production.</span>
+                <span data-lang="zh">生成命令漏了租户限制。测试习惯被直接带进生产。</span>
+                <span data-lang="zh-Hant">生成的指令漏了 tenant guard。測試習慣被直接帶進正式環境。</span>
+                <span data-lang="ja">生成されたコマンドにはテナント制限がなかった。テスト環境の癖が、そのまま本番へ行った。</span>
+              </p>
+            </article>
+            <article class="case-file">
+              <div class="case-meta">
+                <span>CASE 23-C</span>
+                <span data-lang="en">Synthetic composite</span>
+                <span data-lang="zh">合成案例</span>
+                <span data-lang="zh-Hant">合成案例</span>
+                <span data-lang="ja">合成ケース</span>
+              </div>
+              <h3>
+                <span data-lang="en">The permission fix that opened the door wider</span>
+                <span data-lang="zh">权限修复反而开大了门</span>
+                <span data-lang="zh-Hant">權限修復反而把門開得更大</span>
+                <span data-lang="ja">権限修正が扉をさらに広げた</span>
+              </h3>
+              <p>
+                <span data-lang="en">The answer silenced the failing check by broadening access. The bug stopped screaming. The risk stayed.</span>
+                <span data-lang="zh">答案用放宽访问范围压住了失败检查。报错安静了，风险还在。</span>
+                <span data-lang="zh-Hant">答案用放寬存取範圍壓住了失敗檢查。錯誤訊息安靜了，風險還在。</span>
+                <span data-lang="ja">回答はアクセス範囲を広げて失敗するチェックを黙らせた。エラーは静かになり、リスクは残った。</span>
+              </p>
+            </article>
+            <article class="case-file">
+              <div class="case-meta">
+                <span>CASE 31-F</span>
+                <span data-lang="en">Synthetic composite</span>
+                <span data-lang="zh">合成案例</span>
+                <span data-lang="zh-Hant">合成案例</span>
+                <span data-lang="ja">合成ケース</span>
+              </div>
+              <h3>
+                <span data-lang="en">The optimization that made stale data fast</span>
+                <span data-lang="zh">优化很快，数据很旧</span>
+                <span data-lang="zh-Hant">最佳化很快，資料很舊</span>
+                <span data-lang="ja">高速化されたのは古いデータだった</span>
+              </h3>
+              <p>
+                <span data-lang="en">The cache looked smart in the benchmark. In production, it made yesterday's truth arrive instantly.</span>
+                <span data-lang="zh">缓存方案在 benchmark 里很聪明。上线后，它把昨天的真相秒回给用户。</span>
+                <span data-lang="zh-Hant">快取方案在 benchmark 裡很聰明。上線後，它把昨天的真相秒回給使用者。</span>
+                <span data-lang="ja">ベンチマークでは賢いキャッシュだった。本番では、昨日の真実を即座に返した。</span>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band collapse" aria-labelledby="collapse-title">
+        <div class="section-inner">
+          <div class="section-heading wide-heading">
+            <p class="eyebrow">
+              <span data-lang="en">Collapse Chain</span>
+              <span data-lang="zh">能力坍塌链路</span>
+              <span data-lang="zh-Hant">能力坍塌鏈路</span>
+              <span data-lang="ja">能力崩壊の連鎖</span>
+            </p>
+            <h2 id="collapse-title">
+              <span class="title-lines" data-lang="en">
+                <span>Decline feels normal</span>
+                <span>until it costs you</span>
+              </span>
+              <span class="title-lines" data-lang="zh">
+                <span>退化发生时很平静</span>
+                <span>代价出现时已经太晚</span>
+              </span>
+              <span class="title-lines" data-lang="zh-Hant">
+                <span>退化發生時很平靜</span>
+                <span>代價出現時已經太晚</span>
+              </span>
+              <span class="title-lines" data-lang="ja">
+                <span>衰えは静かに進み</span>
+                <span>代償はあとで来る</span>
+              </span>
+            </h2>
+          </div>
+
+          <ol class="collapse-chain">
+            <li>
+              <span>01</span>
+              <strong>
+                <span data-lang="en">Skip the effort</span>
+                <span data-lang="zh">跳过思考</span>
+                <span data-lang="zh-Hant">跳過思考</span>
+                <span data-lang="ja">考える前に飛ばす</span>
+              </strong>
+              <p>
+                <span data-lang="en">The problem becomes a prompt too soon.</span>
+                <span data-lang="zh">问题太快变成了提示词。</span>
+                <span data-lang="zh-Hant">問題太快變成了提示詞。</span>
+                <span data-lang="ja">問題が早すぎる段階でプロンプトになる。</span>
+              </p>
+            </li>
+            <li>
+              <span>02</span>
+              <strong>
+                <span data-lang="en">Trust the polish</span>
+                <span data-lang="zh">相信包装</span>
+                <span data-lang="zh-Hant">相信包裝</span>
+                <span data-lang="ja">見た目を信じる</span>
+              </strong>
+              <p>
+                <span data-lang="en">A confident answer feels like progress.</span>
+                <span data-lang="zh">自信的答案看起来像进展。</span>
+                <span data-lang="zh-Hant">自信的答案看起來像進展。</span>
+                <span data-lang="ja">自信のある答えは進捗に見える。</span>
+              </p>
+            </li>
+            <li>
+              <span>03</span>
+              <strong>
+                <span data-lang="en">Stop reading</span>
+                <span data-lang="zh">停止阅读</span>
+                <span data-lang="zh-Hant">停止閱讀</span>
+                <span data-lang="ja">読むのをやめる</span>
+              </strong>
+              <p>
+                <span data-lang="en">Review turns into a ceremony.</span>
+                <span data-lang="zh">评审变成走流程。</span>
+                <span data-lang="zh-Hant">審查變成走流程。</span>
+                <span data-lang="ja">レビューが儀式になる。</span>
+              </p>
+            </li>
+            <li>
+              <span>04</span>
+              <strong>
+                <span data-lang="en">Lose the edge</span>
+                <span data-lang="zh">失去锋利</span>
+                <span data-lang="zh-Hant">失去鋒利</span>
+                <span data-lang="ja">切れ味を失う</span>
+              </strong>
+              <p>
+                <span data-lang="en">You cannot tell help from harm.</span>
+                <span data-lang="zh">你分不清帮助和伤害。</span>
+                <span data-lang="zh-Hant">你分不清幫助和傷害。</span>
+                <span data-lang="ja">助けと害を見分けられない。</span>
+              </p>
+            </li>
+            <li>
+              <span>05</span>
+              <strong>
+                <span data-lang="en">Own the fallout</span>
+                <span data-lang="zh">承担后果</span>
+                <span data-lang="zh-Hant">收拾後果</span>
+                <span data-lang="ja">後始末を引き受ける</span>
+              </strong>
+              <p>
+                <span data-lang="en">The model wrote it. You shipped it.</span>
+                <span data-lang="zh">模型写了它，你交付了它。</span>
+                <span data-lang="zh-Hant">模型寫了它，你把它上線了。</span>
+                <span data-lang="ja">モデルが書いた。あなたが出した。</span>
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section-band voices" aria-labelledby="voices-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">
+              <span data-lang="en">Composite Confessions</span>
+              <span data-lang="zh">合成自述</span>
+              <span data-lang="zh-Hant">合成自述</span>
+              <span data-lang="ja">合成された告白</span>
+            </p>
+            <h2 id="voices-title">
+              <span class="title-lines" data-lang="en">
+                <span>Not real interviews</span>
+                <span>real regrets</span>
+              </span>
+              <span class="title-lines" data-lang="zh">
+                <span>不是真实采访</span>
+                <span>但后悔很真实</span>
+              </span>
+              <span class="title-lines" data-lang="zh-Hant">
+                <span>不是真實訪談</span>
+                <span>但後悔很真實</span>
+              </span>
+              <span class="title-lines" data-lang="ja">
+                <span>実在のインタビューではない</span>
+                <span>でも後悔は本物</span>
+              </span>
+            </h2>
+          </div>
+
+          <div class="voice-grid">
+            <blockquote>
+              <p>
+                <span data-lang="en">"I merged it in nine minutes. We spent two days figuring out what it did."</span>
+                <span data-lang="zh">“我九分钟就合了。大家花了两天才搞懂它做了什么。”</span>
+                <span data-lang="zh-Hant">「我九分鐘就 merge 了。大家花了兩天才搞懂它在做什麼。」</span>
+                <span data-lang="ja">「9分でマージしました。何をしたのか理解するのに、みんなで2日かかりました。」</span>
+              </p>
+              <cite>
+                <span data-lang="en">Composite backend developer</span>
+                <span data-lang="zh">合成后端开发者</span>
+                <span data-lang="zh-Hant">合成後端開發者</span>
+                <span data-lang="ja">合成バックエンド開発者</span>
+              </cite>
+            </blockquote>
+            <blockquote>
+              <p>
+                <span data-lang="en">"I was not programming. I was approving something that looked like code."</span>
+                <span data-lang="zh">“我不是在编程，我只是在批准一段看起来像代码的东西。”</span>
+                <span data-lang="zh-Hant">「我不是在寫程式，我只是在批准一段看起來像程式碼的東西。」</span>
+                <span data-lang="ja">「私はプログラミングしていませんでした。コードらしきものを承認していただけです。」</span>
+              </p>
+              <cite>
+                <span data-lang="en">Composite frontend developer</span>
+                <span data-lang="zh">合成前端开发者</span>
+                <span data-lang="zh-Hant">合成前端開發者</span>
+                <span data-lang="ja">合成フロントエンド開発者</span>
+              </cite>
+            </blockquote>
+            <blockquote>
+              <p>
+                <span data-lang="en">"The model was not on call. I was."</span>
+                <span data-lang="zh">“模型不用值班，值班的是我。”</span>
+                <span data-lang="zh-Hant">「模型不用 on-call，值班的是我。」</span>
+                <span data-lang="ja">「モデルはオンコールではありません。オンコールだったのは私です。」</span>
+              </p>
+              <cite>
+                <span data-lang="en">Composite platform engineer</span>
+                <span data-lang="zh">合成平台工程师</span>
+                <span data-lang="zh-Hant">合成平台工程師</span>
+                <span data-lang="ja">合成プラットフォームエンジニア</span>
+              </cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band field-notes" aria-labelledby="field-title">
+        <div class="section-inner field-inner">
+          <div class="section-heading">
+            <p class="eyebrow">
+              <span data-lang="en">Editorial Field Notes</span>
+              <span data-lang="zh">编辑部现场笔记</span>
+              <span data-lang="zh-Hant">編輯部現場筆記</span>
+              <span data-lang="ja">編集部フィールドノート</span>
+            </p>
+            <h2 id="field-title">
+              <span class="title-lines" data-lang="en">
+                <span>The bottleneck</span>
+                <span>is accountability</span>
+              </span>
+              <span class="title-lines" data-lang="zh">
+                <span>真正卡住的</span>
+                <span>是责任能力</span>
+              </span>
+              <span class="title-lines" data-lang="zh-Hant">
+                <span>真正卡住的</span>
+                <span>是負責的能力</span>
+              </span>
+              <span class="title-lines" data-lang="ja">
+                <span>本当に詰まっているのは</span>
+                <span>責任を持つ力</span>
+              </span>
+            </h2>
+          </div>
+
+          <div class="field-copy">
+            <p>
+              <span data-lang="en">Output rises. Understanding thins. Meetings become code archaeology.</span>
+              <span data-lang="zh">产出更多，理解更薄，会议变成代码考古。</span>
+              <span data-lang="zh-Hant">產出更多，理解更薄，會議變成程式碼考古。</span>
+              <span data-lang="ja">出力は増える。理解は薄くなる。会議はコード考古学になる。</span>
+            </p>
+            <p>
+              <span data-lang="en">The danger is not bad code. It is forgetting how good reasoning feels.</span>
+              <span data-lang="zh">危险不只是坏代码，而是忘了好的推理应该是什么感觉。</span>
+              <span data-lang="zh-Hant">危險不只是壞程式碼，而是忘了好的推理應該是什麼感覺。</span>
+              <span data-lang="ja">危険なのは悪いコードだけではない。よい推論の感覚を忘れることです。</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band protocol" id="protocol" aria-labelledby="protocol-title">
+        <div class="section-inner">
+          <div class="section-heading wide-heading">
+            <p class="eyebrow">
+              <span data-lang="en">Recovery</span>
+              <span data-lang="zh">自救方法</span>
+              <span data-lang="zh-Hant">自救方法</span>
+              <span data-lang="ja">立て直し</span>
+            </p>
+            <h2 id="protocol-title">
+              <span class="title-lines" data-lang="en">
+                <span>Prove the tool</span>
+                <span>did not make you weaker</span>
+              </span>
+              <span class="title-lines" data-lang="zh">
+                <span>证明工具</span>
+                <span>没有让你更弱</span>
+              </span>
+              <span class="title-lines" data-lang="zh-Hant">
+                <span>證明工具</span>
+                <span>沒有讓你更弱</span>
+              </span>
+              <span class="title-lines" data-lang="ja">
+                <span>ツールで弱くなっていないと</span>
+                <span>証明しろ</span>
+              </span>
+            </h2>
+          </div>
+
+          <div class="protocol-grid">
+            <article>
+              <span class="card-index">A</span>
+              <h3>
+                <span data-lang="en">Read the diff aloud</span>
+                <span data-lang="zh">把 diff 读出来</span>
+                <span data-lang="zh-Hant">把 diff 唸出來</span>
+                <span data-lang="ja">差分を声に出して読む</span>
+              </h3>
+              <p>
+                <span data-lang="en">If you cannot explain it, do not merge it.</span>
+                <span data-lang="zh">解释不了，就先别合并。</span>
+                <span data-lang="zh-Hant">解釋不了，就先別合併。</span>
+                <span data-lang="ja">説明できないなら、まだマージしない。</span>
+              </p>
+            </article>
+            <article>
+              <span class="card-index">B</span>
+              <h3>
+                <span data-lang="en">Draw the cause chain</span>
+                <span data-lang="zh">画出因果链</span>
+                <span data-lang="zh-Hant">畫出因果鏈</span>
+                <span data-lang="ja">因果の鎖を描く</span>
+              </h3>
+              <p>
+                <span data-lang="en">Say what broke and why this fixes it.</span>
+                <span data-lang="zh">说清哪里坏了，以及为什么这样能修。</span>
+                <span data-lang="zh-Hant">說清哪裡出問題，以及為什麼這樣能修。</span>
+                <span data-lang="ja">何が壊れ、なぜこれで直るのかを言う。</span>
+              </p>
+            </article>
+            <article>
+              <span class="card-index">C</span>
+              <h3>
+                <span data-lang="en">Reproduce before repair</span>
+                <span data-lang="zh">修复之前先复现</span>
+                <span data-lang="zh-Hant">修復之前先重現</span>
+                <span data-lang="ja">直す前に再現する</span>
+              </h3>
+              <p>
+                <span data-lang="en">No reproduction, no confidence.</span>
+                <span data-lang="zh">没有复现，就没有确信。</span>
+                <span data-lang="zh-Hant">沒有重現，就沒有把握。</span>
+                <span data-lang="ja">再現できなければ、確信はない。</span>
+              </p>
+            </article>
+            <article>
+              <span class="card-index">D</span>
+              <h3>
+                <span data-lang="en">Write the proof</span>
+                <span data-lang="zh">写下证据</span>
+                <span data-lang="zh-Hant">寫下證據</span>
+                <span data-lang="ja">証拠を書く</span>
+              </h3>
+              <p>
+                <span data-lang="en">Name what would prove success or failure.</span>
+                <span data-lang="zh">写清什么能证明成功，什么能证明失败。</span>
+                <span data-lang="zh-Hant">寫清什麼能證明成功，什麼能證明失敗。</span>
+                <span data-lang="ja">成功と失敗を何で判断するかを書く。</span>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band closing" aria-labelledby="closing-title">
+        <div class="section-inner closing-inner">
+          <p class="eyebrow">
+            <span data-lang="en">Choose A Side</span>
+            <span data-lang="zh">选择立场</span>
+            <span data-lang="zh-Hant">選擇立場</span>
+            <span data-lang="ja">立場を選べ</span>
+          </p>
+          <h2 id="closing-title">
+            <span class="title-lines" data-lang="en">
+              <span>Be a developer with tools</span>
+              <span>not a tool with commit access</span>
+            </span>
+            <span class="title-lines" data-lang="zh">
+              <span>做拥有工具的开发者</span>
+              <span>别做拥有提交权限的工具</span>
+            </span>
+            <span class="title-lines" data-lang="zh-Hant">
+              <span>做掌握工具的開發者</span>
+              <span>別做拿著提交權限的工具</span>
+            </span>
+            <span class="title-lines" data-lang="ja">
+              <span>ツールを持つ開発者であれ</span>
+              <span>コミット権を持つ道具になるな</span>
+            </span>
+          </h2>
+          <div class="hero-actions">
+            <a class="text-button danger" href="https://github.com/D-U-M-B" target="_blank" rel="noreferrer">
+              <span data-lang="en">Visit D.U.M.B. on GitHub</span>
+              <span data-lang="zh">访问 D.U.M.B. GitHub</span>
+              <span data-lang="zh-Hant">前往 D.U.M.B. GitHub</span>
+              <span data-lang="ja">D.U.M.B. の GitHub へ</span>
+            </a>
+            <a class="text-button" href="#top">
+              <span data-lang="en">Return to the warning</span>
+              <span data-lang="zh">回到警告</span>
+              <span data-lang="zh-Hant">回到警告</span>
+              <span data-lang="ja">警告に戻る</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <span data-lang="en">D.U.M.B. — Developers Under Machine Brainrot</span>
+        <span data-lang="zh">D.U.M.B. —— 受机器化思维侵蚀的开发者</span>
+        <span data-lang="zh-Hant">D.U.M.B. —— 被機械化思維侵蝕的開發者</span>
+        <span data-lang="ja">D.U.M.B. — 機械化した思考に侵される開発者</span>
+      </p>
+      <a href="https://github.com/D-U-M-B" target="_blank" rel="noreferrer">
+        https://github.com/D-U-M-B
+      </a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
