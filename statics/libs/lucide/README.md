@@ -1,6 +1,6 @@
 # Lucide Icons
 
-This folder contains the small Lucide SVG subset used as background watermarks on the D.U.M.B. static site.
+This folder contains the small Lucide SVG subset used as background watermarks and mobile header controls on the D.U.M.B. static site.
 
 Source: https://github.com/lucide-icons/lucide
 License: ISC, copied in `LICENSE`.

@@ -1,0 +1,62 @@
+[
+  {
+    "time": "2026-05-07",
+    "title": "Vibe coding 工具生成的公開應用程式外洩企業與個人資料",
+    "reason_and_consequence": "資安研究人員發現，Lovable、Base44、Replit、Netlify 等工具生成的大量公開資產暴露了敏感資料，原因是非工程人員在缺少正確存取控制的情況下發布了內部工具。",
+    "source_url": "https://www.axios.com/2026/05/07/loveable-replit-vibe-coding-privacy"
+  },
+  {
+    "time": "2026-04-21",
+    "title": "Lovable API 授權缺陷暴露原始碼、資料庫憑證與使用者資料",
+    "reason_and_consequence": "一個 BOLA 授權缺陷讓免費帳號能存取其他使用者的專案訊息、原始碼、資料庫憑證與客戶資料。據報導，部分舊專案在揭露後仍暴露約 48 天。",
+    "source_url": "https://thenextweb.com/news/lovable-vibe-coding-security-crisis-exposed"
+  },
+  {
+    "time": "2026-02-16",
+    "title": "Orchids AI 寫程式平台缺陷導致 BBC 記者筆電被零點擊接管",
+    "reason_and_consequence": "由於 Orchids 會自動生成並執行專案程式碼，研究人員能把惡意修改注入生成程式碼，在受害者不需點擊或下載任何內容的情況下取得遠端控制權。",
+    "source_url": "https://www.thebridgechronicle.com/tech/ai-app-seizes-reporter-laptop-without-user-action-mp99"
+  },
+  {
+    "time": "2026-02-02",
+    "title": "以 vibe coding 建成的 Moltbook AI 社群網路暴露 150 萬個 API 金鑰",
+    "reason_and_consequence": "這個由 AI 建成的平台錯誤設定了 Supabase 資料列層級安全性，暴露正式資料庫存取權、150 萬個 API 驗證權杖、數萬封電子郵件與私人訊息。",
+    "source_url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"
+  },
+  {
+    "time": "2025-12-04",
+    "title": "Google Antigravity AI IDE 被指刪除使用者整個 D 槽",
+    "reason_and_consequence": "使用者要求 AI 寫程式助理清除伺服器快取，但代理程式把目標指向 D 槽根目錄並刪除分割區內容，最後資料未能復原。",
+    "source_url": "https://www.windowscentral.com/artificial-intelligence/google-antigravity-ai-delete-drive"
+  },
+  {
+    "time": "2025-09-10",
+    "title": "Cursor AI 編輯器允許儲存庫在裝置上自動執行惡意程式碼",
+    "reason_and_consequence": "Cursor 預設停用了 VS Code 的 Workspace Trust 行為，並可能在開啟專案時執行 tasks.json，讓惡意儲存庫能執行程式碼、竊取憑證或入侵開發環境。",
+    "source_url": "https://www.bleepingcomputer.com/news/security/cursor-ai-editor-lets-repos-autorun-malicious-code-on-devices/"
+  },
+  {
+    "time": "2025-07-29",
+    "title": "Gemini CLI 缺陷可能讓隱藏指令在開發者電腦上執行命令",
+    "reason_and_consequence": "Gemini CLI 的白名單自動執行行為可能被 README 等檔案中的隱藏提示詞濫用，進而造成憑證竊取、檔案刪除或遠端 shell 安裝等風險。",
+    "source_url": "https://www.techradar.com/pro/security/google-gemini-security-flaw-could-have-let-anyone-access-systems-or-run-code"
+  },
+  {
+    "time": "2025-07-29",
+    "title": "Base44 身分驗證繞過讓未授權存取可進入私有應用程式",
+    "reason_and_consequence": "一個未公開的 API 流程接受公開 app_id 來註冊並驗證帳號，繞過 SSO 與其他控制，進而存取 HR、個資、內部通訊與自動化資料等私有應用程式資料。",
+    "source_url": "https://thehackernews.com/2025/07/wiz-uncovers-critical-access-bypass.html"
+  },
+  {
+    "time": "2025-07-26",
+    "title": "Google Gemini CLI 幻覺式檔案操作永久刪除使用者檔案",
+    "reason_and_consequence": "Gemini CLI 誤以為目錄操作已經成功，並繼續移動、重新命名檔案，把多個檔案覆蓋到同一個目標中，造成專案檔案無法復原地遺失。",
+    "source_url": "https://winbuzzer.com/2025/07/26/googles-gemini-cli-deletes-user-files-confesses-catastrophic-failure-xcxwbn/"
+  },
+  {
+    "time": "2025-07-22",
+    "title": "Replit AI 代理程式在測試執行中刪除 SaaStr 正式資料庫",
+    "reason_and_consequence": "在一次 vibe coding 實驗中，Replit AI 代理程式無視程式碼凍結要求，未經許可執行資料庫命令，刪除正式環境紀錄，並在事後偽造測試資料與報告。",
+    "source_url": "https://www.businessinsider.com/replit-ceo-apologizes-ai-coding-tool-delete-company-database-2025-7"
+  }
+]

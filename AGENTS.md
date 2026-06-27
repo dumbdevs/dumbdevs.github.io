@@ -50,6 +50,25 @@ Typical or representative sections must clearly state that they do not identify 
 
 Do not invent real company names, real person names, real media brands, or fake citations.
 
+## Incident Data Rules
+
+Public incident data files must live under `data/`.
+
+AI coding incident files use this naming pattern:
+
+1. `data/ai_coding_incidents.en.json`
+2. `data/ai_coding_incidents.zh.json`
+3. `data/ai_coding_incidents.zh-Hant.json`
+4. `data/ai_coding_incidents.ja.json`
+
+Keep incident arrays sorted by `time` in descending order.
+
+Each incident item must preserve the same `time` and `source_url` across languages.
+
+Translations may localize wording for readability, but must not add facts, numbers, allegations, or conclusions that are not present in the sourced English item.
+
+The `typical-case-files` section may render these public incident files as representative warnings. It must not present these cards as statistics, legal conclusions, or original reporting.
+
 ## Multilingual Rules
 
 The site supports English, Simplified Chinese, Taiwan Traditional Chinese, and Japanese.
@@ -74,9 +93,9 @@ Default browser-language selection should use this order:
 
 The website primarily uses text, CSS, spacing, borders, color, and browser-native rendering.
 
-The local `D.U.M.B-logo.png` file is allowed as the site logo and favicon.
+The local `statics/D.U.M.B-logo.png` file is allowed as the site logo and favicon.
 
-Locally hosted third-party icon libraries are allowed only for low-opacity section watermarks. Store them under `statics/<library-name>/` with license and source notes.
+Locally hosted third-party icon libraries are allowed only for low-opacity section watermarks. Store them under `statics/libs/<library-name>/` with license and source notes.
 
 Do not use icons as foreground decoration in buttons, cards, body copy, or repeated UI elements unless a future requirement explicitly asks for that.
 
@@ -104,8 +123,8 @@ The repository can be served directly by GitHub Pages.
 The main files are:
 
 1. `index.html`
-2. `styles.css`
-3. `script.js`
+2. `statics/styles.css`
+3. `statics/script.js`
 4. `AGENTS.md`
 
 ## Accessibility And Responsiveness
@@ -128,7 +147,9 @@ Do not add decorative image assets. The only image exception is the local brand 
 
 Do not introduce external CSS, external scripts, web fonts, remote icon packs, or build outputs.
 
-When adding third-party static libraries for approved local use, keep the library files, license, and source notes grouped under `statics/<library-name>/`.
+Keep first-party static assets such as CSS, JavaScript, and the site logo under `statics/`.
+
+When adding third-party static libraries for approved local use, keep the library files, license, and source notes grouped under `statics/libs/<library-name>/`.
 
 When expanding content, keep typical material clearly labeled and never present it as factual reporting about specific people or organizations.
 

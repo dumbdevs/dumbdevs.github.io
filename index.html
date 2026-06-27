@@ -8,47 +8,118 @@
       content="D.U.M.B. is a wake-up call for developers who use AI without surrendering judgment, debugging ability, or ownership."
     >
     <title>D.U.M.B. — Developers Under Machine Brainrot</title>
-    <link rel="icon" type="image/png" href="D.U.M.B-logo.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="statics/D.U.M.B-logo.png">
+    <link rel="stylesheet" href="statics/styles.css">
   </head>
   <body data-lang="en">
     <header class="site-header" aria-label="Primary navigation">
       <a class="wordmark" href="#top" aria-label="D.U.M.B. home">
-        <img src="D.U.M.B-logo.png" alt="" width="1254" height="1254">
+        <img src="statics/D.U.M.B-logo.png" alt="" width="1254" height="1254">
         <span class="wordmark-text">D.U.M.B.</span>
       </a>
-      <nav class="nav-links" aria-label="Section navigation">
+      <div class="mobile-header-actions" aria-label="Mobile header controls">
+        <button
+          class="icon-button"
+          type="button"
+          aria-controls="site-navigation"
+          aria-expanded="false"
+          data-panel-toggle="navigation"
+        >
+          <img src="statics/libs/lucide/icons/square-menu.svg" alt="" width="24" height="24" aria-hidden="true">
+          <span class="sr-only">
+            <span data-lang="en">Open navigation</span>
+            <span data-lang="zh">打开导航</span>
+            <span data-lang="zh-Hant">開啟導覽</span>
+            <span data-lang="ja">ナビゲーションを開く</span>
+          </span>
+        </button>
+        <button
+          class="icon-button"
+          type="button"
+          aria-controls="language-panel"
+          aria-expanded="false"
+          data-panel-toggle="language"
+        >
+          <img src="statics/libs/lucide/icons/languages.svg" alt="" width="24" height="24" aria-hidden="true">
+          <span class="sr-only">
+            <span data-lang="en">Open language options</span>
+            <span data-lang="zh">打开语言选项</span>
+            <span data-lang="zh-Hant">開啟語言選項</span>
+            <span data-lang="ja">言語設定を開く</span>
+          </span>
+        </button>
+      </div>
+      <div class="panel-backdrop" data-panel-backdrop hidden></div>
+      <nav id="site-navigation" class="nav-links" aria-label="Section navigation" data-panel="navigation">
+        <div class="panel-heading">
+          <span class="panel-title">
+            <span data-lang="en">Navigation</span>
+            <span data-lang="zh">导航</span>
+            <span data-lang="zh-Hant">導覽</span>
+            <span data-lang="ja">ナビゲーション</span>
+          </span>
+          <button class="panel-close" type="button" data-panel-close>
+            <span data-lang="en">Collapse</span>
+            <span data-lang="zh">收起</span>
+            <span data-lang="zh-Hant">收起</span>
+            <span data-lang="ja">閉じる</span>
+          </button>
+        </div>
+        <a href="#public-warning">
+          <span data-lang="en">Warning</span>
+          <span data-lang="zh">警告</span>
+          <span data-lang="zh-Hant">警告</span>
+          <span data-lang="ja">警告</span>
+        </a>
         <a href="#loss-of-control">
-          <span data-lang="en">Loss Of Control</span>
+          <span data-lang="en">Control</span>
           <span data-lang="zh">失控</span>
           <span data-lang="zh-Hant">失控</span>
-          <span data-lang="ja">制御不能</span>
+          <span data-lang="ja">失控</span>
         </a>
         <a href="#damage-report">
-          <span data-lang="en">Damage Report</span>
-          <span data-lang="zh">危害报告</span>
-          <span data-lang="zh-Hant">危害報告</span>
-          <span data-lang="ja">被害報告</span>
+          <span data-lang="en">Damage</span>
+          <span data-lang="zh">危害</span>
+          <span data-lang="zh-Hant">危害</span>
+          <span data-lang="ja">危害</span>
+        </a>
+        <a href="#typical-case-files">
+          <span data-lang="en">Cases</span>
+          <span data-lang="zh">案例</span>
+          <span data-lang="zh-Hant">案例</span>
+          <span data-lang="ja">案例</span>
         </a>
         <a href="#recovery">
           <span data-lang="en">Recovery</span>
           <span data-lang="zh">自救</span>
           <span data-lang="zh-Hant">自救</span>
-          <span data-lang="ja">立て直し</span>
-        </a>
-        <a href="https://github.com/D-U-M-B" target="_blank" rel="noreferrer">
-          GitHub
-          <span class="github-followers" data-github-followers hidden></span>
+          <span data-lang="ja">自救</span>
         </a>
       </nav>
-      <div class="language-switch">
-        <label class="sr-only" for="language-select">Language</label>
-        <select id="language-select" class="language-select" data-language-select>
-          <option value="en">English</option>
-          <option value="zh">简体中文</option>
-          <option value="zh-Hant">繁體中文</option>
-          <option value="ja">日本語</option>
-        </select>
+      <div id="language-panel" class="language-switch" data-panel="language">
+        <div class="panel-heading">
+          <span class="panel-title">
+            <span data-lang="en">Language</span>
+            <span data-lang="zh">语言</span>
+            <span data-lang="zh-Hant">語言</span>
+            <span data-lang="ja">言語</span>
+          </span>
+          <button class="panel-close" type="button" data-panel-close>
+            <span data-lang="en">Collapse</span>
+            <span data-lang="zh">收起</span>
+            <span data-lang="zh-Hant">收起</span>
+            <span data-lang="ja">閉じる</span>
+          </button>
+        </div>
+        <button class="language-trigger" type="button" aria-haspopup="true" aria-expanded="false" data-language-trigger>
+          <span data-language-current>English</span>
+        </button>
+        <div class="language-options" aria-label="Language options">
+          <button class="language-option" type="button" data-language-option="en">English</button>
+          <button class="language-option" type="button" data-language-option="zh">简体中文</button>
+          <button class="language-option" type="button" data-language-option="zh-Hant">繁體中文</button>
+          <button class="language-option" type="button" data-language-option="ja">日本語</button>
+        </div>
       </div>
     </header>
 
@@ -396,7 +467,7 @@
 
       <section class="section-band typical-case-files" id="typical-case-files" aria-labelledby="typical-case-files-title">
         <div class="section-inner">
-          <div class="section-heading">
+          <div class="section-heading wide-heading">
             <p class="eyebrow">
               <span data-lang="en">Typical Case Files</span>
               <span data-lang="zh">典型案例档案</span>
@@ -405,94 +476,49 @@
             </p>
             <h2 id="typical-case-files-title">
               <span class="title-lines" data-lang="en">
-                <span>Typical patterns</span>
-                <span>real warning signs</span>
+                <span>Public failures</span>
+                <span>familiar warning signs</span>
               </span>
               <span class="title-lines" data-lang="zh">
-                <span>模式是典型的</span>
-                <span>警报是真实的</span>
+                <span>公开失败</span>
+                <span>典型警报</span>
               </span>
               <span class="title-lines" data-lang="zh-Hant">
-                <span>模式是典型的</span>
-                <span>警報是真實的</span>
+                <span>公開失敗</span>
+                <span>典型警報</span>
               </span>
               <span class="title-lines" data-lang="ja">
-                <span>典型的なパターン</span>
-                <span>警告は本物</span>
+                <span>公開された失敗</span>
+                <span>見慣れた警告</span>
               </span>
             </h2>
           </div>
 
-          <div class="case-list">
-            <article class="case-file">
-              <div class="case-meta">
-                <span>CASE 17-A</span>
-                <span data-lang="en">Typical case</span>
-                <span data-lang="zh">典型案例</span>
-                <span data-lang="zh-Hant">典型案例</span>
-                <span data-lang="ja">典型ケース</span>
-              </div>
-              <h3>
-                <span data-lang="en">The cleanup script that deleted production data</span>
-                <span data-lang="zh">清理脚本清掉了生产数据</span>
-                <span data-lang="zh-Hant">清理腳本清掉了正式資料</span>
-                <span data-lang="ja">クリーンアップスクリプトが本番データを消した</span>
-              </h3>
-              <p>
-                <span data-lang="en">The generated command missed the tenant guard. Test habits went straight to production.</span>
-                <span data-lang="zh">生成命令漏了租户限制。测试习惯被直接带进生产。</span>
-                <span data-lang="zh-Hant">生成的指令漏了 tenant guard。測試習慣被直接帶進正式環境。</span>
-                <span data-lang="ja">生成されたコマンドにはテナント制限がなかった。テスト環境の癖が、そのまま本番へ行った。</span>
-              </p>
-            </article>
-            <article class="case-file">
-              <div class="case-meta">
-                <span>CASE 23-C</span>
-                <span data-lang="en">Typical case</span>
-                <span data-lang="zh">典型案例</span>
-                <span data-lang="zh-Hant">典型案例</span>
-                <span data-lang="ja">典型ケース</span>
-              </div>
-              <h3>
-                <span data-lang="en">The permission fix that opened the door wider</span>
-                <span data-lang="zh">权限修复反而开大了门</span>
-                <span data-lang="zh-Hant">權限修復反而把門開得更大</span>
-                <span data-lang="ja">権限修正が扉をさらに広げた</span>
-              </h3>
-              <p>
-                <span data-lang="en">The answer silenced the failing check by broadening access. The bug stopped screaming. The risk stayed.</span>
-                <span data-lang="zh">答案用放宽访问范围压住了失败检查。报错安静了，风险还在。</span>
-                <span data-lang="zh-Hant">答案用放寬存取範圍壓住了失敗檢查。錯誤訊息安靜了，風險還在。</span>
-                <span data-lang="ja">回答はアクセス範囲を広げて失敗するチェックを黙らせた。エラーは静かになり、リスクは残った。</span>
-              </p>
-            </article>
-            <article class="case-file">
-              <div class="case-meta">
-                <span>CASE 31-F</span>
-                <span data-lang="en">Typical case</span>
-                <span data-lang="zh">典型案例</span>
-                <span data-lang="zh-Hant">典型案例</span>
-                <span data-lang="ja">典型ケース</span>
-              </div>
-              <h3>
-                <span data-lang="en">The optimization that made stale data fast</span>
-                <span data-lang="zh">优化很快，数据很旧</span>
-                <span data-lang="zh-Hant">最佳化很快，資料很舊</span>
-                <span data-lang="ja">高速化されたのは古いデータだった</span>
-              </h3>
-              <p>
-                <span data-lang="en">The cache looked smart in the benchmark. In production, it made yesterday's truth arrive instantly.</span>
-                <span data-lang="zh">缓存方案在 benchmark 里很聪明。上线后，它把昨天的真相秒回给用户。</span>
-                <span data-lang="zh-Hant">快取方案在 benchmark 裡很聰明。上線後，它把昨天的真相秒回給使用者。</span>
-                <span data-lang="ja">ベンチマークでは賢いキャッシュだった。本番では、昨日の真実を即座に返した。</span>
-              </p>
-            </article>
+          <div class="incident-carousel" data-incident-carousel hidden>
+            <div class="incident-window" data-incident-window tabindex="0" aria-live="polite">
+              <div class="incident-track" data-incident-track></div>
+            </div>
+            <div class="incident-controls" aria-label="Typical case controls">
+              <button class="incident-control" type="button" data-incident-prev>
+                <span data-lang="en">Previous</span>
+                <span data-lang="zh">上一条</span>
+                <span data-lang="zh-Hant">上一則</span>
+                <span data-lang="ja">前へ</span>
+              </button>
+              <span class="incident-count" data-incident-count></span>
+              <button class="incident-control" type="button" data-incident-next>
+                <span data-lang="en">Next</span>
+                <span data-lang="zh">下一条</span>
+                <span data-lang="zh-Hant">下一則</span>
+                <span data-lang="ja">次へ</span>
+              </button>
+            </div>
           </div>
-          <p class="section-note">
-            <span data-lang="en">These are not reports of specific real incidents. They are patterns distilled from many real cases and do not identify any specific person, team, company, or organization.</span>
-            <span data-lang="zh">这些不是指向某一件真实案例的报道，而是根据大量真实案例总结出的典型风险模式，不指向任何特定个人、团队、公司或组织。</span>
-            <span data-lang="zh-Hant">這些不是指向某一件真實案例的報導，而是根據大量真實案例整理出的典型風險模式，不指向任何特定個人、團隊、公司或組織。</span>
-            <span data-lang="ja">これらは特定の実例を報じるものではありません。多数の実例から整理した典型的なリスクパターンであり、特定の個人、チーム、企業、組織を指すものではありません。</span>
+          <p class="section-note incident-note">
+            <span data-lang="en">These cards summarize public reports linked in each item. They are typical warnings, not statistics, legal conclusions, or original reporting.</span>
+            <span data-lang="zh">这些卡片概述了每条所链接的公开报道。它们是典型警示，不作为统计、法律结论或本站原创报道。</span>
+            <span data-lang="zh-Hant">這些卡片概述每則所連結的公開報導。它們是典型警示，不作為統計、法律結論或本站原創報導。</span>
+            <span data-lang="ja">各カードはリンク先の公開報道を要約したものです。典型的な警告であり、統計、法的結論、独自報道ではありません。</span>
           </p>
         </div>
       </section>
@@ -851,6 +877,6 @@
       </p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="statics/script.js"></script>
   </body>
 </html>
