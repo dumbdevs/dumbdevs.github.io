@@ -72,9 +72,11 @@ Default browser-language selection should use this order:
 
 ## Visual Direction
 
-The website uses only text, CSS, spacing, borders, color, and browser-native rendering.
+The website primarily uses text, CSS, spacing, borders, color, and browser-native rendering.
 
-No images, generated artwork, SVG illustrations, icon libraries, web fonts, video, canvas, or external visual assets are allowed.
+The local `D.U.M.B-logo.png` file is allowed as the site logo and favicon.
+
+No generated artwork, SVG illustrations, icon libraries, web fonts, video, canvas, external visual assets, or decorative images are allowed.
 
 The visual system should feel like a public alarm from a technical organization:
 
@@ -118,7 +120,7 @@ Layouts must prevent text overlap and horizontal overflow on narrow viewports.
 
 Keep the site dependency-free unless a future requirement explicitly changes the project direction.
 
-Do not add decorative image assets.
+Do not add decorative image assets. The only image exception is the local brand logo used for the header and favicon.
 
 Do not introduce external CSS, external scripts, web fonts, SVG icon packs, or build outputs.
 
