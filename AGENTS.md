@@ -14,7 +14,7 @@ The official GitHub organization URL is:
 
 The reference repository at `/home/dev/projects/D.U.M.B-github` provides the core identity and theme.
 
-This website must not copy that profile verbatim. It expands the theme into a richer public site with cases, warnings, field notes, recovery guidance, and calls to action.
+This website must not copy that profile verbatim. It expands the theme into a richer public site with cases, warnings, recovery guidance, and calls to action.
 
 The protected file `/home/dev/projects/D.U.M.B-github/profile/README.md` must not be modified by this website project.
 
@@ -40,13 +40,13 @@ English, Simplified Chinese, Taiwan Traditional Chinese, and Japanese headings d
 
 Chinese paired phrases may use two-line layouts when the wording has a parallel or couplet-like rhythm.
 
-## Synthetic Content Rules
+## Typical Content Rules
 
-The website may use synthetic cases, composite confessions, and editorial field notes to dramatize common failure patterns.
+The website may use typical cases and representative confessions to dramatize common failure patterns.
 
-These sections must not pretend to be real interviews, real journalism, real incidents, real statistics, or real third-party reports.
+These sections may be distilled from many real situations, but they must not pretend to be real interviews, real journalism, real incidents, real statistics, or real third-party reports.
 
-Synthetic or composite sections should be clearly labeled in the page copy or surrounding context.
+Typical or representative sections must clearly state that they do not identify any specific person, team, company, or organization.
 
 Do not invent real company names, real person names, real media brands, or fake citations.
 
@@ -76,7 +76,11 @@ The website primarily uses text, CSS, spacing, borders, color, and browser-nativ
 
 The local `D.U.M.B-logo.png` file is allowed as the site logo and favicon.
 
-No generated artwork, SVG illustrations, icon libraries, web fonts, video, canvas, external visual assets, or decorative images are allowed.
+Locally hosted third-party icon libraries are allowed only for low-opacity section watermarks. Store them under `statics/<library-name>/` with license and source notes.
+
+Do not use icons as foreground decoration in buttons, cards, body copy, or repeated UI elements unless a future requirement explicitly asks for that.
+
+No generated artwork, web fonts, video, canvas, remote visual assets, or decorative images are allowed.
 
 The visual system should feel like a public alarm from a technical organization:
 
@@ -122,8 +126,10 @@ Keep the site dependency-free unless a future requirement explicitly changes the
 
 Do not add decorative image assets. The only image exception is the local brand logo used for the header and favicon.
 
-Do not introduce external CSS, external scripts, web fonts, SVG icon packs, or build outputs.
+Do not introduce external CSS, external scripts, web fonts, remote icon packs, or build outputs.
 
-When expanding content, keep synthetic material clearly labeled and never present it as factual reporting.
+When adding third-party static libraries for approved local use, keep the library files, license, and source notes grouped under `statics/<library-name>/`.
+
+When expanding content, keep typical material clearly labeled and never present it as factual reporting about specific people or organizations.
 
 When changing tone, preserve the core D.U.M.B. warning: use AI, but do not surrender judgment.
