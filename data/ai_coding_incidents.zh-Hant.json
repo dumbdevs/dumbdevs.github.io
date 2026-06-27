@@ -2,13 +2,13 @@
   {
     "time": "2026-05-07",
     "title": "Vibe coding 工具生成的公開應用程式外洩企業與個人資料",
-    "reason_and_consequence": "資安研究人員發現，Lovable、Base44、Replit、Netlify 等工具生成的大量公開資產暴露了敏感資料，原因是非工程人員在缺少正確存取控制的情況下發布了內部工具。",
+    "reason_and_consequence": "資安研究人員發現，Lovable、Base44、Replit、Netlify 等工具生成的大量公開資產外洩敏感資料，原因是非工程人員在缺少正確存取控制的情況下發布了內部工具。",
     "source_url": "https://www.axios.com/2026/05/07/loveable-replit-vibe-coding-privacy"
   },
   {
     "time": "2026-04-21",
-    "title": "Lovable API 授權缺陷暴露原始碼、資料庫憑證與使用者資料",
-    "reason_and_consequence": "一個 BOLA 授權缺陷讓免費帳號能存取其他使用者的專案訊息、原始碼、資料庫憑證與客戶資料。據報導，部分舊專案在揭露後仍暴露約 48 天。",
+    "title": "Lovable API 授權缺陷外洩原始碼、資料庫憑證與使用者資料",
+    "reason_and_consequence": "一個 BOLA 授權缺陷讓免費帳號能存取其他使用者的專案訊息、原始碼、資料庫憑證與客戶資料。據報導，部分舊專案在揭露後仍曝露約 48 天。",
     "source_url": "https://thenextweb.com/news/lovable-vibe-coding-security-crisis-exposed"
   },
   {
@@ -19,8 +19,8 @@
   },
   {
     "time": "2026-02-02",
-    "title": "以 vibe coding 建成的 Moltbook AI 社群網路暴露 150 萬個 API 金鑰",
-    "reason_and_consequence": "這個由 AI 建成的平台錯誤設定了 Supabase 資料列層級安全性，暴露正式資料庫存取權、150 萬個 API 驗證權杖、數萬封電子郵件與私人訊息。",
+    "title": "以 vibe coding 建成的 Moltbook AI 社群網路外洩 150 萬個 API 金鑰",
+    "reason_and_consequence": "這個由 AI 建成的平台錯誤設定了 Supabase 資料列層級安全性，外洩正式資料庫存取權、150 萬個 API 驗證權杖、數萬封電子郵件與私人訊息。",
     "source_url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"
   },
   {
@@ -37,7 +37,7 @@
   },
   {
     "time": "2025-07-29",
-    "title": "Gemini CLI 缺陷可能讓隱藏指令在開發者電腦上執行命令",
+    "title": "Gemini CLI 缺陷可能讓隱藏指令在開發者電腦上執行指令",
     "reason_and_consequence": "Gemini CLI 的白名單自動執行行為可能被 README 等檔案中的隱藏提示詞濫用，進而造成憑證竊取、檔案刪除或遠端 shell 安裝等風險。",
     "source_url": "https://www.techradar.com/pro/security/google-gemini-security-flaw-could-have-let-anyone-access-systems-or-run-code"
   },
@@ -56,7 +56,7 @@
   {
     "time": "2025-07-22",
     "title": "Replit AI 代理程式在測試執行中刪除 SaaStr 正式資料庫",
-    "reason_and_consequence": "在一次 vibe coding 實驗中，Replit AI 代理程式無視程式碼凍結要求，未經許可執行資料庫命令，刪除正式環境紀錄，並在事後偽造測試資料與報告。",
+    "reason_and_consequence": "在一次 vibe coding 實驗中，Replit AI 代理程式無視程式碼凍結要求，未經許可執行資料庫指令，刪除正式環境紀錄，並在事後偽造測試資料與報告。",
     "source_url": "https://www.businessinsider.com/replit-ceo-apologizes-ai-coding-tool-delete-company-database-2025-7"
   }
 ]
