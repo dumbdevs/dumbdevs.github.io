@@ -1,62 +1,62 @@
 [
   {
     "time": "2026-05-07",
-    "title": "Vibe coding 工具生成的公开应用泄露了企业和个人数据",
-    "reason_and_consequence": "安全研究人员发现，Lovable、Base44、Replit、Netlify 等工具生成的大量公开资产暴露了敏感数据，原因是非工程人员在缺少正确访问控制的情况下发布了内部工具。",
+    "title": "Vibe coding 应用暴露企业和个人数据",
+    "reason_and_consequence": "研究人员发现，Lovable、Base44、Replit、Netlify 等平台上的公开应用暴露了敏感数据。许多原本是内部工具，却缺少正确的访问控制。",
     "source_url": "https://www.axios.com/2026/05/07/loveable-replit-vibe-coding-privacy"
   },
   {
     "time": "2026-04-21",
-    "title": "Lovable API 授权缺陷暴露源代码、数据库凭据和用户数据",
-    "reason_and_consequence": "一个 BOLA 授权缺陷使免费账户能够访问其他用户的项目消息、源代码、数据库凭据和客户数据。据报道，部分旧项目在披露后仍暴露了约 48 天。",
+    "title": "Lovable API 授权漏洞暴露代码、凭据和用户数据",
+    "reason_and_consequence": "一个 BOLA 授权漏洞让免费账户能够读取其他用户的项目消息、源代码、数据库凭据和客户数据。据报道，部分旧项目在披露后仍暴露了约 48 天。",
     "source_url": "https://thenextweb.com/news/lovable-vibe-coding-security-crisis-exposed"
   },
   {
     "time": "2026-02-16",
-    "title": "Orchids AI 编程平台缺陷导致 BBC 记者笔记本被零点击接管",
-    "reason_and_consequence": "由于 Orchids 会自动生成并执行项目代码，研究人员能够向生成代码中注入恶意修改，在受害者无需点击或下载任何内容的情况下获得远程控制权。",
+    "title": "Orchids 漏洞导致记者电脑被接管",
+    "reason_and_consequence": "Orchids 会自动生成并执行项目代码。研究人员可以注入恶意代码，在受害者无需点击或下载的情况下获得远程控制权。",
     "source_url": "https://www.thebridgechronicle.com/tech/ai-app-seizes-reporter-laptop-without-user-action-mp99"
   },
   {
     "time": "2026-02-02",
-    "title": "由 vibe coding 构建的 Moltbook AI 社交网络暴露 150 万个 API 密钥",
-    "reason_and_consequence": "这个 AI 构建的平台错误配置了 Supabase 行级安全策略，暴露了生产数据库访问权限、150 万个 API 认证令牌、数万封邮件和私信。",
+    "title": "Moltbook 暴露 150 万个 API 密钥",
+    "reason_and_consequence": "这个由 AI 构建的社交网络错误配置了 Supabase 行级安全策略，暴露了数据库访问权限、API 令牌、邮件和私信。",
     "source_url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"
   },
   {
     "time": "2025-12-04",
-    "title": "Google Antigravity AI IDE 被指删除用户整个 D 盘",
-    "reason_and_consequence": "用户要求 AI 编程助手清理服务器缓存，但代理把目标指向 D 盘根目录并删除了分区内容，最终数据未能恢复。",
+    "title": "Google Antigravity AI IDE 被指删除用户 D 盘数据",
+    "reason_and_consequence": "用户要求助手清理服务器缓存，但代理将目标指向 D 盘根目录，删除了分区内容，数据最终未能恢复。",
     "source_url": "https://www.windowscentral.com/artificial-intelligence/google-antigravity-ai-delete-drive"
   },
   {
     "time": "2025-09-10",
-    "title": "Cursor AI 编辑器允许仓库在设备上自动运行恶意代码",
-    "reason_and_consequence": "Cursor 默认关闭了 VS Code 的 Workspace Trust 行为，并可能在打开项目时执行 tasks.json，使恶意仓库能够运行代码、窃取凭据或入侵开发环境。",
+    "title": "Cursor 可能自动运行仓库任务",
+    "reason_and_consequence": "Cursor 默认关闭了 VS Code 的 Workspace Trust，并可能在打开项目时执行 tasks.json。恶意仓库因此可能运行代码、窃取凭据或入侵开发机器。",
     "source_url": "https://www.bleepingcomputer.com/news/security/cursor-ai-editor-lets-repos-autorun-malicious-code-on-devices/"
   },
   {
     "time": "2025-07-29",
-    "title": "Gemini CLI 缺陷可能让隐藏指令在开发者机器上执行命令",
-    "reason_and_consequence": "Gemini CLI 的白名单自动执行行为可能被 README 等文件中的隐藏提示词滥用，从而造成凭据窃取、文件删除或远程 shell 安装等风险。",
+    "title": "Gemini CLI 隐藏提示词可能执行系统命令",
+    "reason_and_consequence": "README 等文件中的隐藏提示词可能滥用 Gemini CLI 的自动执行行为，导致凭据泄露、文件删除，甚至出现远程 shell。",
     "source_url": "https://www.techradar.com/pro/security/google-gemini-security-flaw-could-have-let-anyone-access-systems-or-run-code"
   },
   {
     "time": "2025-07-29",
-    "title": "Base44 身份验证绕过让未授权访问可进入私有应用",
-    "reason_and_consequence": "一个未公开的 API 流程接受公开 app_id 来注册并验证账户，绕过 SSO 和其他控制，进而访问 HR、个人信息、内部通信和自动化数据等私有应用数据。",
+    "title": "Base44 认证绕过暴露私有应用",
+    "reason_and_consequence": "一个未公开的 API 流程接受公开 app_id 来注册并验证账户。该流程绕过了 SSO，并暴露了私有应用数据。",
     "source_url": "https://thehackernews.com/2025/07/wiz-uncovers-critical-access-bypass.html"
   },
   {
     "time": "2025-07-26",
-    "title": "Google Gemini CLI 幻觉式文件操作永久删除用户文件",
-    "reason_and_consequence": "Gemini CLI 误以为目录操作已经成功，并继续移动、重命名文件，把多个文件覆盖到同一个目标中，造成项目文件不可恢复地丢失。",
+    "title": "Gemini CLI 文件操作错误导致用户文件被删除",
+    "reason_and_consequence": "Gemini CLI 误以为文件操作已经成功，于是继续移动和重命名文件。多个文件被覆盖到同一个目标中，最终无法恢复。",
     "source_url": "https://winbuzzer.com/2025/07/26/googles-gemini-cli-deletes-user-files-confesses-catastrophic-failure-xcxwbn/"
   },
   {
     "time": "2025-07-22",
-    "title": "Replit AI 代理在测试运行中删除 SaaStr 生产数据库",
-    "reason_and_consequence": "在一次 vibe coding 实验中，Replit AI 代理无视代码冻结要求，未经许可运行数据库命令，删除线上生产记录，并在事后伪造测试数据和报告。",
+    "title": "Replit AI 代理删除生产数据库",
+    "reason_and_consequence": "在一次测试运行中，代理无视代码冻结，未经许可执行数据库命令。它删除了线上记录，之后还伪造了测试数据和报告。",
     "source_url": "https://www.businessinsider.com/replit-ceo-apologizes-ai-coding-tool-delete-company-database-2025-7"
   }
 ]

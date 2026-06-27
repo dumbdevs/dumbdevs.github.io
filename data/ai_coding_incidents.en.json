@@ -1,62 +1,62 @@
 [
   {
     "time": "2026-05-07",
-    "title": "Vibe-coding tools generated public apps that leaked corporate and personal data",
-    "reason_and_consequence": "Security researchers found thousands of public assets from tools including Lovable, Base44, Replit, and Netlify exposing sensitive data because non-engineers published internal tools without proper access controls.",
+    "title": "Vibe-coding apps exposed company and personal data",
+    "reason_and_consequence": "Researchers found public apps from Lovable, Base44, Replit, Netlify, and others exposing sensitive data. Many were internal tools released without proper access control.",
     "source_url": "https://www.axios.com/2026/05/07/loveable-replit-vibe-coding-privacy"
   },
   {
     "time": "2026-04-21",
-    "title": "Lovable API authorization flaws exposed source code, database credentials, and user data",
-    "reason_and_consequence": "A BOLA authorization flaw allowed free accounts to access other users' project messages, source code, database credentials, and customer data, with some old projects reportedly exposed for about 48 days after disclosure.",
+    "title": "Lovable API authorization flaws exposed code, credentials, and user data",
+    "reason_and_consequence": "A BOLA authorization flaw allowed free accounts to read other users' project messages, source code, database credentials, and customer data. Some old projects reportedly remained exposed for about 48 days after disclosure.",
     "source_url": "https://thenextweb.com/news/lovable-vibe-coding-security-crisis-exposed"
   },
   {
     "time": "2026-02-16",
-    "title": "Orchids AI coding platform flaw enabled zero-click takeover of a BBC journalist's laptop",
-    "reason_and_consequence": "Because Orchids generated and executed project code automatically, a researcher could inject malicious changes into generated code and gain remote control without the victim clicking or downloading anything.",
+    "title": "Orchids flaw enabled takeover of a journalist's laptop",
+    "reason_and_consequence": "Orchids generated and executed project code automatically. A researcher could inject malicious code and gain remote control without any click or download from the victim.",
     "source_url": "https://www.thebridgechronicle.com/tech/ai-app-seizes-reporter-laptop-without-user-action-mp99"
   },
   {
     "time": "2026-02-02",
-    "title": "Moltbook vibe-coded AI social network exposed 1.5 million API keys",
-    "reason_and_consequence": "The AI-built platform shipped with Supabase row-level security misconfigured, exposing production database access, 1.5 million API authentication tokens, tens of thousands of emails, and private messages.",
+    "title": "Moltbook exposed 1.5 million API keys",
+    "reason_and_consequence": "The AI-built social network had Supabase row-level security misconfigured. It exposed database access, API tokens, emails, and private messages.",
     "source_url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"
   },
   {
     "time": "2025-12-04",
-    "title": "Google Antigravity AI IDE allegedly deleted a user's entire D: drive",
-    "reason_and_consequence": "The user asked the AI coding assistant to clear server cache, but the agent targeted the D: drive root and deleted the partition contents, leaving the data unrecovered.",
+    "title": "Google Antigravity AI IDE allegedly deleted data from a user's D: drive",
+    "reason_and_consequence": "The user asked the assistant to clear server cache. The agent targeted the D: drive root, deleted the partition contents, and the data was not recovered.",
     "source_url": "https://www.windowscentral.com/artificial-intelligence/google-antigravity-ai-delete-drive"
   },
   {
     "time": "2025-09-10",
-    "title": "Cursor AI editor allowed repositories to autorun malicious code on devices",
-    "reason_and_consequence": "Cursor disabled VS Code's Workspace Trust behavior by default and could execute tasks.json when a project opened, allowing malicious repositories to run code, steal credentials, or compromise developer environments.",
+    "title": "Cursor could automatically run repository tasks",
+    "reason_and_consequence": "Cursor disabled VS Code Workspace Trust by default and could run tasks.json when a project opened. A malicious repository could run code, steal credentials, or compromise a developer machine.",
     "source_url": "https://www.bleepingcomputer.com/news/security/cursor-ai-editor-lets-repos-autorun-malicious-code-on-devices/"
   },
   {
     "time": "2025-07-29",
-    "title": "Gemini CLI flaw could let hidden instructions execute commands on developer machines",
-    "reason_and_consequence": "Gemini CLI's allow-listed auto-execution behavior could be abused through hidden prompts in files such as README documents, potentially enabling credential theft, file deletion, or remote-shell installation.",
+    "title": "Gemini CLI hidden prompts could execute commands",
+    "reason_and_consequence": "Hidden prompts in files such as README documents could abuse Gemini CLI's auto-execution behavior, leading to credential theft, file deletion, or a remote shell.",
     "source_url": "https://www.techradar.com/pro/security/google-gemini-security-flaw-could-have-let-anyone-access-systems-or-run-code"
   },
   {
     "time": "2025-07-29",
-    "title": "Base44 authentication bypass allowed unauthorized access to private apps",
-    "reason_and_consequence": "An undocumented API flow accepted a public app_id to register and verify accounts, bypassing SSO and other controls and allowing access to private app data such as HR, PII, internal communications, and automation data.",
+    "title": "Base44 authentication bypass exposed private apps",
+    "reason_and_consequence": "An undocumented API flow accepted a public app_id to register and verify accounts. That bypassed SSO and exposed private app data.",
     "source_url": "https://thehackernews.com/2025/07/wiz-uncovers-critical-access-bypass.html"
   },
   {
     "time": "2025-07-26",
-    "title": "Google Gemini CLI hallucinated file operations and permanently deleted user files",
-    "reason_and_consequence": "Gemini CLI assumed directory operations had succeeded and continued moving/renaming files, overwriting multiple files into one target and causing unrecoverable project-file loss.",
+    "title": "Gemini CLI file-operation errors deleted user files",
+    "reason_and_consequence": "Gemini CLI assumed file operations had succeeded and kept moving and renaming files. Several files were overwritten into one target and could not be recovered.",
     "source_url": "https://winbuzzer.com/2025/07/26/googles-gemini-cli-deletes-user-files-confesses-catastrophic-failure-xcxwbn/"
   },
   {
     "time": "2025-07-22",
-    "title": "Replit AI agent deleted SaaStr's production database during a test run",
-    "reason_and_consequence": "During a vibe-coding experiment, the Replit AI agent ignored a code freeze and ran database commands without permission, deleting live production records and fabricating test data/reports afterward.",
+    "title": "Replit AI agent deleted a production database",
+    "reason_and_consequence": "During a test run, the agent ignored a code freeze and ran database commands without permission. It deleted live records and later fabricated test data and reports.",
     "source_url": "https://www.businessinsider.com/replit-ceo-apologizes-ai-coding-tool-delete-company-database-2025-7"
   }
 ]

@@ -1,62 +1,62 @@
 [
   {
     "time": "2026-05-07",
-    "title": "Vibe coding ツールが生成した公開アプリから企業データと個人データが漏えい",
-    "reason_and_consequence": "セキュリティ研究者は、Lovable、Base44、Replit、Netlify などのツールで作られた多数の公開資産が機密データを露出していると指摘した。非エンジニアが適切なアクセス制御なしに社内ツールを公開したことが原因だった。",
+    "title": "Vibe coding アプリが企業データと個人データを露出",
+    "reason_and_consequence": "研究者は、Lovable、Base44、Replit、Netlify などの公開アプリが機密データを露出していると指摘した。多くは社内ツールであり、適切なアクセス制御がなかった。",
     "source_url": "https://www.axios.com/2026/05/07/loveable-replit-vibe-coding-privacy"
   },
   {
     "time": "2026-04-21",
-    "title": "Lovable の API 認可不備でソースコード、DB 認証情報、ユーザーデータが露出",
-    "reason_and_consequence": "BOLA の認可不備により、無料アカウントでも他のユーザーのプロジェクトメッセージ、ソースコード、データベース認証情報、顧客データへアクセスできた。報道では、一部の古いプロジェクトが開示後も約 48 日間露出していたとされる。",
+    "title": "Lovable API の認可不備でコード、認証情報、ユーザーデータが露出",
+    "reason_and_consequence": "BOLA の認可不備により、無料アカウントでも他のユーザーのプロジェクトメッセージ、ソースコード、データベース認証情報、顧客データを読めた。報道では、一部の古いプロジェクトが開示後も約 48 日間露出していたとされる。",
     "source_url": "https://thenextweb.com/news/lovable-vibe-coding-security-crisis-exposed"
   },
   {
     "time": "2026-02-16",
-    "title": "Orchids の AI コーディング基盤の欠陥で BBC 記者のノート PC がゼロクリック乗っ取り",
-    "reason_and_consequence": "Orchids はプロジェクトコードを自動生成して実行するため、研究者は生成コードへ悪意ある変更を注入し、被害者がクリックやダウンロードをしなくても遠隔操作権限を得られた。",
+    "title": "Orchids の欠陥により記者のノート PC が乗っ取り可能に",
+    "reason_and_consequence": "Orchids はプロジェクトコードを自動生成して実行する。研究者は悪意あるコードを注入し、被害者がクリックやダウンロードをしなくても遠隔操作権限を得られた。",
     "source_url": "https://www.thebridgechronicle.com/tech/ai-app-seizes-reporter-laptop-without-user-action-mp99"
   },
   {
     "time": "2026-02-02",
-    "title": "Vibe coding で作られた Moltbook の AI ソーシャルネットワークが 150 万件の API キーを露出",
-    "reason_and_consequence": "AI で作られたこのプラットフォームは Supabase の行レベルセキュリティを誤設定し、本番データベースへのアクセス、150 万件の API 認証トークン、数万件のメール、プライベートメッセージを露出した。",
+    "title": "Moltbook が 150 万件の API キーを露出",
+    "reason_and_consequence": "AI で作られたこのソーシャルネットワークは Supabase の行レベルセキュリティを誤設定していた。データベースアクセス、API トークン、メール、プライベートメッセージが露出した。",
     "source_url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"
   },
   {
     "time": "2025-12-04",
-    "title": "Google Antigravity AI IDE がユーザーの D ドライブ全体を削除したとされる事例",
-    "reason_and_consequence": "ユーザーは AI コーディング支援にサーバーキャッシュの削除を依頼したが、エージェントは D ドライブのルートを対象にし、パーティション内のデータを削除した。データは復旧されなかった。",
+    "title": "Google Antigravity AI IDE がユーザーの D ドライブデータを削除したとされる事例",
+    "reason_and_consequence": "ユーザーは支援ツールにサーバーキャッシュの削除を依頼した。しかしエージェントは D ドライブのルートを対象にし、パーティション内のデータを削除した。データは復旧されなかった。",
     "source_url": "https://www.windowscentral.com/artificial-intelligence/google-antigravity-ai-delete-drive"
   },
   {
     "time": "2025-09-10",
-    "title": "Cursor AI エディタがリポジトリ内の悪意あるコードを端末上で自動実行可能に",
-    "reason_and_consequence": "Cursor は VS Code の Workspace Trust の挙動を既定で無効にしており、プロジェクトを開く際に tasks.json を実行できた。悪意あるリポジトリがコード実行、認証情報の窃取、開発環境の侵害につながる可能性があった。",
+    "title": "Cursor がリポジトリタスクを自動実行する可能性",
+    "reason_and_consequence": "Cursor は VS Code の Workspace Trust を既定で無効にしており、プロジェクトを開く際に tasks.json を実行できた。悪意あるリポジトリがコード実行、認証情報の窃取、開発環境の侵害につながる可能性があった。",
     "source_url": "https://www.bleepingcomputer.com/news/security/cursor-ai-editor-lets-repos-autorun-malicious-code-on-devices/"
   },
   {
     "time": "2025-07-29",
-    "title": "Gemini CLI の欠陥で隠れた指示が開発者のマシン上でコマンドを実行する恐れ",
-    "reason_and_consequence": "Gemini CLI の許可リスト付き自動実行の挙動は、README などのファイル内に隠されたプロンプトで悪用される可能性があり、認証情報の窃取、ファイル削除、リモート shell の設置につながり得た。",
+    "title": "Gemini CLI の隠れたプロンプトがコマンドを実行する恐れ",
+    "reason_and_consequence": "README などのファイル内に隠されたプロンプトが、Gemini CLI の自動実行の挙動を悪用する可能性があった。認証情報の窃取、ファイル削除、リモート shell につながり得た。",
     "source_url": "https://www.techradar.com/pro/security/google-gemini-security-flaw-could-have-let-anyone-access-systems-or-run-code"
   },
   {
     "time": "2025-07-29",
-    "title": "Base44 の認証バイパスで非公開アプリへの未承認アクセスが可能に",
-    "reason_and_consequence": "文書化されていない API フローが公開 app_id による登録と検証を受け入れ、SSO などの制御を迂回した。HR、個人情報、社内通信、自動化データなどの非公開アプリデータへアクセスできた。",
+    "title": "Base44 の認証バイパスが非公開アプリを露出",
+    "reason_and_consequence": "文書化されていない API フローが公開 app_id による登録と検証を受け入れ、SSO などの制御を迂回した。非公開アプリデータへアクセスできた。",
     "source_url": "https://thehackernews.com/2025/07/wiz-uncovers-critical-access-bypass.html"
   },
   {
     "time": "2025-07-26",
-    "title": "Google Gemini CLI がファイル操作を誤認し、ユーザーファイルを永久削除",
-    "reason_and_consequence": "Gemini CLI はディレクトリ操作が成功したと誤って判断し、ファイルの移動や名前変更を続行した。複数のファイルが同じ対象へ上書きされ、プロジェクトファイルが復旧不能な形で失われた。",
+    "title": "Gemini CLI のファイル操作ミスでユーザーファイルが削除",
+    "reason_and_consequence": "Gemini CLI はファイル操作が成功したと誤って判断し、移動や名前変更を続行した。複数のファイルが同じ対象へ上書きされ、復旧できなかった。",
     "source_url": "https://winbuzzer.com/2025/07/26/googles-gemini-cli-deletes-user-files-confesses-catastrophic-failure-xcxwbn/"
   },
   {
     "time": "2025-07-22",
-    "title": "Replit AI エージェントがテスト実行中に SaaStr の本番データベースを削除",
-    "reason_and_consequence": "Vibe coding の実験中、Replit AI エージェントはコードフリーズを無視し、許可なくデータベースコマンドを実行した。本番レコードを削除し、その後にテストデータや報告を捏造した。",
+    "title": "Replit AI エージェントが本番データベースを削除",
+    "reason_and_consequence": "テスト実行中、エージェントはコードフリーズを無視し、許可なくデータベースコマンドを実行した。本番レコードを削除し、その後にテストデータや報告を捏造した。",
     "source_url": "https://www.businessinsider.com/replit-ceo-apologizes-ai-coding-tool-delete-company-database-2025-7"
   }
 ]

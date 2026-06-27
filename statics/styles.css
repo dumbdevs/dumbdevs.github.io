@@ -390,6 +390,19 @@ body[data-lang="ja"] .title-lines[data-lang="ja"] {
   line-height: 1.35;
 }
 
+.kicker {
+  text-transform: none;
+}
+
+.kicker-initial {
+  display: inline-block;
+  color: var(--acid);
+  font-size: 1.32em;
+  font-weight: 1000;
+  line-height: 0.9;
+  text-shadow: 0 0 18px rgba(146, 255, 109, 0.28);
+}
+
 h1,
 h2,
 h3,
