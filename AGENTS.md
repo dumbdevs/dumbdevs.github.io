@@ -8,7 +8,7 @@ The site is a sharp public warning for developers who use AI tools without prese
 
 The official GitHub organization URL is:
 
-`https://github.com/D-U-M-B`
+`https://github.com/dumbdevs`
 
 ## Relationship To The Organization Profile
 

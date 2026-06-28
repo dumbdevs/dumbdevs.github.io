@@ -1,7 +1,7 @@
 (function () {
   var storageKey = "dumb-site-language";
   var githubFollowersStorageKey = "dumb-github-followers";
-  var githubOrgApi = "https://api.github.com/orgs/D-U-M-B";
+  var githubOrgApi = "https://api.github.com/orgs/dumbdevs";
   var incidentPaths = {
     en: "data/ai_coding_incidents.en.json",
     zh: "data/ai_coding_incidents.zh.json",
