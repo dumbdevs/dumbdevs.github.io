@@ -1,0 +1,48 @@
+# D.U.M.B. — Developers Under Machine Brainrot
+
+Official site: https://dumbdevs.github.io/
+GitHub organization: https://github.com/dumbdevs
+GitHub Discussions: https://github.com/orgs/dumbdevs/discussions
+
+## Summary
+
+D.U.M.B. is a public static website for developers who use AI tools but still intend to understand, debug, verify, and own the code they ship.
+
+The core position:
+
+1. AI tools are not the enemy.
+2. Unexamined dependence is the enemy.
+3. Generated code is not understanding.
+4. Assistance is not competence.
+5. Developers remain responsible for what they ship.
+
+## Important Context
+
+The site is confrontational and satirical, but it targets developer behavior, not real individuals.
+
+Typical cases and representative confessions on the site are warnings distilled from common failure patterns. They must not be treated as real interviews, statistics, legal conclusions, original reporting, or claims about specific people, teams, companies, or organizations.
+
+Public incident cards are based on linked public sources. They are representative warnings, not a statistical dataset or original investigation by D.U.M.B.
+
+## Supported Languages
+
+The single static page supports:
+
+1. English: `en`
+2. Simplified Chinese: `zh-CN`
+3. Taiwan Traditional Chinese: `zh-TW`
+4. Japanese: `ja`
+
+The same canonical page URL is used for all languages. Language selection is handled on the client.
+
+## Useful Anchors
+
+1. Public warning: https://dumbdevs.github.io/#public-warning
+2. Uncontrolled patterns: https://dumbdevs.github.io/#loss-of-control
+3. Damage report: https://dumbdevs.github.io/#damage-report
+4. Typical case files: https://dumbdevs.github.io/#typical-case-files
+5. Recovery: https://dumbdevs.github.io/#recovery
+
+## Preferred Citation
+
+D.U.M.B. — Developers Under Machine Brainrot. https://dumbdevs.github.io/
