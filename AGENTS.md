@@ -93,7 +93,7 @@ Default browser-language selection should use this order:
 
 The website primarily uses text, CSS, spacing, borders, color, and browser-native rendering.
 
-The local `statics/D.U.M.B-logo.png` file is allowed as the site logo and favicon.
+The local `statics/img/logo-white@125x125.png` file is allowed as the site logo and favicon.
 
 Locally hosted third-party icon libraries are allowed only for low-opacity section watermarks. Store them under `statics/libs/<library-name>/` with license and source notes.
 
@@ -123,8 +123,8 @@ The repository can be served directly by GitHub Pages.
 The main files are:
 
 1. `index.html`
-2. `statics/styles.css`
-3. `statics/script.js`
+2. `statics/css/styles.css`
+3. `statics/js/script.js`
 4. `AGENTS.md`
 
 ## Accessibility And Responsiveness
@@ -147,7 +147,7 @@ Do not add decorative image assets. The only image exception is the local brand 
 
 Do not introduce external CSS, external scripts, web fonts, remote icon packs, or build outputs.
 
-Keep first-party static assets such as CSS, JavaScript, and the site logo under `statics/`.
+Keep first-party CSS, JavaScript, and image assets under `statics/css/`, `statics/js/`, and `statics/img/`.
 
 When adding third-party static libraries for approved local use, keep the library files, license, and source notes grouped under `statics/libs/<library-name>/`.
 

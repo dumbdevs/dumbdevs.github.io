@@ -16,6 +16,9 @@
   var panelClosers = Array.prototype.slice.call(document.querySelectorAll("[data-panel-close]"));
   var panelBackdrop = document.querySelector("[data-panel-backdrop]");
   var navigationPanel = document.querySelector('[data-panel="navigation"]');
+  var logoDialog = document.querySelector("[data-logo-dialog]");
+  var logoDialogOpenButton = document.querySelector("[data-logo-dialog-open]");
+  var logoDialogCloseButtons = Array.prototype.slice.call(document.querySelectorAll("[data-logo-dialog-close]"));
   var githubFollowerNodes = Array.prototype.slice.call(document.querySelectorAll("[data-github-followers]"));
   var githubFollowerCount = null;
   var incidentCarousel = document.querySelector("[data-incident-carousel]");
@@ -34,6 +37,9 @@
   var incidentRequestId = 0;
   var incidentIsPaused = false;
   var incidentIsPanelPaused = false;
+  var logoDialogIsClosing = false;
+  var logoDialogCloseDelay = 180;
+  var logoDialogCloseTimer = null;
   var shouldResetScrollOnLoad = isReloadNavigation();
 
   if (shouldResetScrollOnLoad && "scrollRestoration" in window.history) {
@@ -331,6 +337,60 @@
     }
 
     setPanelState(panelName);
+  }
+
+  function openLogoDialog() {
+    if (!logoDialog) {
+      return;
+    }
+
+    closePanels();
+    if (logoDialogCloseTimer) {
+      window.clearTimeout(logoDialogCloseTimer);
+      logoDialogCloseTimer = null;
+    }
+
+    logoDialogIsClosing = false;
+    logoDialog.classList.remove("is-closing");
+    document.body.classList.add("logo-dialog-open");
+
+    if (typeof logoDialog.showModal === "function" && !logoDialog.open) {
+      logoDialog.showModal();
+      return;
+    }
+
+    logoDialog.setAttribute("open", "");
+  }
+
+  function finishLogoDialogClose() {
+    if (!logoDialog) {
+      return;
+    }
+
+    if (logoDialog.open && typeof logoDialog.close === "function") {
+      logoDialog.close();
+    } else {
+      logoDialog.removeAttribute("open");
+    }
+
+    logoDialog.classList.remove("is-closing");
+    document.body.classList.remove("logo-dialog-open");
+    logoDialogIsClosing = false;
+    logoDialogCloseTimer = null;
+  }
+
+  function closeLogoDialog() {
+    if (!logoDialog) {
+      return;
+    }
+
+    if (!logoDialog.open || logoDialogIsClosing) {
+      return;
+    }
+
+    logoDialogIsClosing = true;
+    logoDialog.classList.add("is-closing");
+    logoDialogCloseTimer = window.setTimeout(finishLogoDialogClose, logoDialogCloseDelay);
   }
 
   function clearIncidentTimer() {
@@ -743,9 +803,42 @@
     });
   }
 
+  if (logoDialogOpenButton) {
+    logoDialogOpenButton.addEventListener("click", openLogoDialog);
+  }
+
+  logoDialogCloseButtons.forEach(function (button) {
+    button.addEventListener("click", closeLogoDialog);
+  });
+
+  if (logoDialog) {
+    logoDialog.addEventListener("click", function (event) {
+      if (event.target === logoDialog) {
+        closeLogoDialog();
+      }
+    });
+
+    logoDialog.addEventListener("cancel", function (event) {
+      event.preventDefault();
+      closeLogoDialog();
+    });
+
+    logoDialog.addEventListener("close", function () {
+      if (logoDialogCloseTimer) {
+        window.clearTimeout(logoDialogCloseTimer);
+        logoDialogCloseTimer = null;
+      }
+
+      logoDialog.classList.remove("is-closing");
+      document.body.classList.remove("logo-dialog-open");
+      logoDialogIsClosing = false;
+    });
+  }
+
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
       closePanels();
+      closeLogoDialog();
     }
   });
 
