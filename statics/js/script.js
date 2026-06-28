@@ -19,9 +19,11 @@
   var logoDialog = document.querySelector("[data-logo-dialog]");
   var logoDialogOpenButton = document.querySelector("[data-logo-dialog-open]");
   var logoDialogCloseButtons = Array.prototype.slice.call(document.querySelectorAll("[data-logo-dialog-close]"));
+  var logoPreviewImages = Array.prototype.slice.call(document.querySelectorAll("[data-logo-preview]"));
   var githubFollowerNodes = Array.prototype.slice.call(document.querySelectorAll("[data-github-followers]"));
   var githubFollowerCount = null;
   var incidentCarousel = document.querySelector("[data-incident-carousel]");
+  var incidentSection = incidentCarousel && incidentCarousel.closest ? incidentCarousel.closest("section") : null;
   var incidentTrack = document.querySelector("[data-incident-track]");
   var incidentWindow = document.querySelector("[data-incident-window]");
   var incidentCountNode = document.querySelector("[data-incident-count]");
@@ -35,6 +37,8 @@
   var incidentDeadline = 0;
   var incidentRemaining = incidentDelay;
   var incidentRequestId = 0;
+  var incidentLoadAllowed = false;
+  var pendingIncidentLanguage = null;
   var incidentIsPaused = false;
   var incidentIsPanelPaused = false;
   var logoDialogIsClosing = false;
@@ -339,12 +343,32 @@
     setPanelState(panelName);
   }
 
+  function loadLogoPreviews() {
+    logoPreviewImages.forEach(function (image) {
+      if (image.getAttribute("data-logo-loaded") === "true") {
+        return;
+      }
+
+      if (image.dataset.srcset) {
+        image.srcset = image.dataset.srcset;
+      }
+
+      if (image.dataset.src) {
+        image.src = image.dataset.src;
+      }
+
+      image.setAttribute("data-logo-loaded", "true");
+    });
+  }
+
   function openLogoDialog() {
     if (!logoDialog) {
       return;
     }
 
     closePanels();
+    loadLogoPreviews();
+
     if (logoDialogCloseTimer) {
       window.clearTimeout(logoDialogCloseTimer);
       logoDialogCloseTimer = null;
@@ -638,6 +662,52 @@
       });
   }
 
+  function allowIncidentLoading() {
+    if (incidentLoadAllowed) {
+      return;
+    }
+
+    incidentLoadAllowed = true;
+    loadIncidents(pendingIncidentLanguage || normalizeLanguage(document.body.dataset.lang));
+  }
+
+  function setupIncidentLoading() {
+    var target = incidentSection || incidentCarousel;
+
+    if (!incidentCarousel || !incidentTrack) {
+      return;
+    }
+
+    if ("IntersectionObserver" in window && target) {
+      new IntersectionObserver(
+        function (entries, observer) {
+          var isClose = entries.some(function (entry) {
+            return entry.isIntersecting || entry.intersectionRatio > 0;
+          });
+
+          if (!isClose) {
+            return;
+          }
+
+          observer.disconnect();
+          allowIncidentLoading();
+        },
+        {
+          rootMargin: "720px 0px",
+          threshold: 0,
+        }
+      ).observe(target);
+      return;
+    }
+
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(allowIncidentLoading, { timeout: 1800 });
+      return;
+    }
+
+    window.setTimeout(allowIncidentLoading, 900);
+  }
+
   function todayKey() {
     var now = new Date();
     var month = String(now.getMonth() + 1).padStart(2, "0");
@@ -710,8 +780,12 @@
       }
     });
 
+    pendingIncidentLanguage = nextLanguage;
     renderGitHubFollowers();
-    loadIncidents(nextLanguage);
+
+    if (incidentLoadAllowed) {
+      loadIncidents(nextLanguage);
+    }
   }
 
   function fetchGitHubFollowers() {
@@ -888,6 +962,7 @@
 
   resetReloadScroll();
   applyLanguage(preferredLanguage());
+  setupIncidentLoading();
   closePanels();
   fetchGitHubFollowers();
 })();

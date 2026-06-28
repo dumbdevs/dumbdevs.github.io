@@ -348,6 +348,13 @@ body[data-lang="ja"] .title-lines[data-lang="ja"] {
   --watermark-rotate: -8deg;
 }
 
+@supports (content-visibility: auto) {
+  .section-band:not(.hero) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 760px;
+  }
+}
+
 .section-band::after {
   position: absolute;
   top: var(--watermark-top);
