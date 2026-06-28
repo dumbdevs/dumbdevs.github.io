@@ -84,15 +84,15 @@ body [data-lang] {
 }
 
 body[data-lang="en"] [data-lang="en"],
-body[data-lang="zh"] [data-lang="zh"],
-body[data-lang="zh-Hant"] [data-lang="zh-Hant"],
+body[data-lang="zh-CN"] [data-lang="zh-CN"],
+body[data-lang="zh-TW"] [data-lang="zh-TW"],
 body[data-lang="ja"] [data-lang="ja"] {
   display: inline;
 }
 
 body[data-lang="en"] .title-lines[data-lang="en"],
-body[data-lang="zh"] .title-lines[data-lang="zh"],
-body[data-lang="zh-Hant"] .title-lines[data-lang="zh-Hant"],
+body[data-lang="zh-CN"] .title-lines[data-lang="zh-CN"],
+body[data-lang="zh-TW"] .title-lines[data-lang="zh-TW"],
 body[data-lang="ja"] .title-lines[data-lang="ja"] {
   display: block;
 }

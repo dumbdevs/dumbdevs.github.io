@@ -4,8 +4,8 @@
   var githubOrgApi = "https://api.github.com/orgs/dumbdevs";
   var incidentPaths = {
     en: "data/ai_coding_incidents.en.json",
-    zh: "data/ai_coding_incidents.zh.json",
-    "zh-Hant": "data/ai_coding_incidents.zh-Hant.json",
+    "zh-CN": "data/ai_coding_incidents.zh.json",
+    "zh-TW": "data/ai_coding_incidents.zh-Hant.json",
     ja: "data/ai_coding_incidents.ja.json",
   };
   var languagePanel = document.querySelector('[data-panel="language"]');
@@ -112,7 +112,15 @@
   }
 
   function normalizeLanguage(value) {
-    var supportedLanguages = ["en", "zh", "zh-Hant", "ja"];
+    var supportedLanguages = ["en", "zh-CN", "zh-TW", "ja"];
+
+    if (value === "zh") {
+      return "zh-CN";
+    }
+
+    if (value === "zh-Hant") {
+      return "zh-TW";
+    }
 
     return supportedLanguages.indexOf(value) === -1 ? "en" : value;
   }
@@ -131,11 +139,11 @@
       language.indexOf("zh-hk") === 0 ||
       language.indexOf("zh-mo") === 0
     ) {
-      return "zh-Hant";
+      return "zh-TW";
     }
 
     if (language.indexOf("zh") === 0) {
-      return "zh";
+      return "zh-CN";
     }
 
     return "en";
@@ -152,11 +160,11 @@
   }
 
   function localeForLanguage(language) {
-    if (language === "zh") {
+    if (language === "zh-CN") {
       return "zh-CN";
     }
 
-    if (language === "zh-Hant") {
+    if (language === "zh-TW") {
       return "zh-TW";
     }
 
@@ -176,11 +184,11 @@
   }
 
   function languageName(language) {
-    if (language === "zh") {
+    if (language === "zh-CN") {
       return "简体中文";
     }
 
-    if (language === "zh-Hant") {
+    if (language === "zh-TW") {
       return "繁體中文";
     }
 
@@ -195,11 +203,11 @@
     var language = normalizeLanguage(document.body.dataset.lang);
     var countText = formatNumber(count, language);
 
-    if (language === "zh") {
+    if (language === "zh-CN") {
       return countText + " 位关注者";
     }
 
-    if (language === "zh-Hant") {
+    if (language === "zh-TW") {
       return countText + " 位追蹤者";
     }
 
@@ -211,11 +219,11 @@
   }
 
   function publicReportLabel(language) {
-    if (language === "zh") {
+    if (language === "zh-CN") {
       return "公开报道";
     }
 
-    if (language === "zh-Hant") {
+    if (language === "zh-TW") {
       return "公開報導";
     }
 
@@ -227,11 +235,11 @@
   }
 
   function sourceLinkLabel(language) {
-    if (language === "zh") {
+    if (language === "zh-CN") {
       return "打开来源";
     }
 
-    if (language === "zh-Hant") {
+    if (language === "zh-TW") {
       return "開啟來源";
     }
 
@@ -243,11 +251,11 @@
   }
 
   function nextIncidentLabel(language) {
-    if (language === "zh") {
+    if (language === "zh-CN") {
       return "下一条";
     }
 
-    if (language === "zh-Hant") {
+    if (language === "zh-TW") {
       return "下一則";
     }
 
@@ -259,11 +267,11 @@
   }
 
   function pausedIncidentLabel(language) {
-    if (language === "zh") {
+    if (language === "zh-CN") {
       return "暂停";
     }
 
-    if (language === "zh-Hant") {
+    if (language === "zh-TW") {
       return "暫停";
     }
 
@@ -760,7 +768,7 @@
   function applyLanguage(language) {
     var nextLanguage = normalizeLanguage(language);
 
-    document.documentElement.lang = nextLanguage === "zh" ? "zh-CN" : nextLanguage;
+    document.documentElement.lang = nextLanguage;
     document.body.dataset.lang = nextLanguage;
     saveLanguage(nextLanguage);
 
